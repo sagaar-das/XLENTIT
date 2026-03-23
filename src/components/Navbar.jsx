@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import logo from "../assets/xlentlogo.png";
+import logo from "../assets/xlentLogo.png";
 import { Menu, X } from "lucide-react";
 
 function Navbar() {
