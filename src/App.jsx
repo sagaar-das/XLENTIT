@@ -3,6 +3,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import About from "./pages/About";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="about" element={<About />} />
         </Route>
       </Routes>
+      <WhatsAppButton />
     </BrowserRouter>
   );
 }

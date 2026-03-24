@@ -1,73 +1,81 @@
 import { motion } from "framer-motion";
-import logo from "../assets/xlentLogo.png";
-
-
+import {
+  Code,
+  Smartphone,
+  Briefcase,
+  Users,
+  Layers,
+  Cpu
+} from "lucide-react";
 
 function ServicesSection() {
+
   const services = [
     {
-      title: "1-on-1 Career Mentorship",
-      desc: "Personalized guidance from industry experts to help you navigate your career path.",
+      title: "Software Development",
+      desc: "We deliver scalable, secure, and high-performance software solutions tailored to business needs.",
+      icon: <Code size={28} />,
     },
     {
-      title: "Mock Interviews",
-      desc: "Practice real interview scenarios including technical and HR rounds with feedback.",
+      title: "Application Development",
+      desc: "We build user-friendly web and mobile applications designed for performance and seamless experience.",
+      icon: <Smartphone size={28} />,
     },
     {
-      title: "Resume & LinkedIn Building",
-      desc: "Create ATS-friendly resumes and profiles that attract recruiters.",
+      title: "Management Consulting",
+      desc: "We help businesses optimize operations and drive digital transformation through strategic consulting.",
+      icon: <Briefcase size={28} />,
     },
     {
-      title: "Skill Assessment",
-      desc: "Evaluate your strengths and identify areas for improvement.",
+      title: "IT Staffing",
+      desc: "We connect businesses with top-tier tech talent, ensuring faster hiring and long-term success.",
+      icon: <Users size={28} />,
     },
     {
-      title: "Job Search Support",
-      desc: "Guided job applications with strategy and tracking support.",
+      title: "BPO / KPO",
+      desc: "We provide cost-effective outsourcing solutions to streamline business processes.",
+      icon: <Layers size={28} />,
     },
     {
-      title: "IT Staffing Solutions",
-      desc: "Connect with top companies through our hiring network.",
+      title: "IoT / AI Development",
+      desc: "We leverage AI and IoT to build intelligent systems that drive automation and insights.",
+      icon: <Cpu size={28} />,
     },
   ];
 
   return (
-    <section className="relative bg-[#1a1a1a] py-20 px-4 sm:px-6 overflow-hidden">
+    <section className="relative bg-[#0D0D0F] py-20 px-6 overflow-hidden">
 
-      {/* BACKGROUND LOGO */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <img
-          src={logo}
-          alt="bg-logo"
-          className="w-[300px] sm:w-[500px] md:w-[700px] opacity-[0.03]"
-        />
-      </div>
+      {/* 🔥 GRID BACKGROUND */}
+      <div className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: `
+            linear-gradient(#ffffff10 1px, transparent 1px),
+            linear-gradient(90deg, #ffffff10 1px, transparent 1px)
+          `,
+          backgroundSize: "40px 40px"
+        }}
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto text-center">
 
-        {/* HEADING */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="text-[#d4af37] text-sm tracking-widest mb-3">
-            OUR SERVICES
-          </p>
+        {/* HEADER */}
+        <p className="text-[#d4af37] text-sm tracking-widest mb-3">
+          OUR SERVICES
+        </p>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Everything You Need to <br />
-            <span className="text-[#d4af37]">Land Your Dream Job</span>
-          </h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-white">
+          Everything You Need to <br />
+          <span className="text-[#d4af37]">Land Your Dream Job</span>
+        </h2>
 
-          <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-            Comprehensive career support designed to take you from where you are
-            to where you want to be.
-          </p>
-        </motion.div>
+        <p className="mt-5 text-gray-400 max-w-2xl mx-auto">
+          Comprehensive career support designed to take you from where you are
+          to where you want to be.
+        </p>
 
-        {/* CARDS */}
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 🔥 CARDS */}
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {services.map((service, i) => (
             <motion.div
@@ -75,40 +83,47 @@ function ServicesSection() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="relative bg-[#111111] p-6 rounded-xl border border-[#2a2a2a] hover:border-[#d4af37] transition group"
+              whileHover={{
+                rotateX: 5,
+                rotateY: -5,
+                scale: 1.03,
+              }}
+              className="group relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 text-left transition-all duration-300"
             >
 
-              {/* GOLD BAR */}
-              <div className="absolute left-0 top-0 h-full w-[3px] bg-[#d4af37] opacity-100"></div>
+              {/* 🔥 GLOW BORDER */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.2),transparent_60%)]"></div>
+
+              {/* ICON */}
+              <motion.div
+                animate={{
+                  y: [0, -5, 0],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                }}
+                className="relative z-10 w-14 h-14 rounded-lg bg-[#0D0D0F] flex items-center justify-center text-[#d4af37] mb-5"
+              >
+                {service.icon}
+              </motion.div>
 
               {/* TITLE */}
-              <h3 className="text-lg font-semibold text-white group-hover:text-[#d4af37] transition">
+              <h3 className="relative z-10 text-lg font-semibold text-white group-hover:text-[#d4af37] transition">
                 {service.title}
               </h3>
 
               {/* DESC */}
-              <p className="mt-3 text-gray-400 text-sm leading-relaxed">
+              <p className="relative z-10 mt-3 text-gray-400 text-sm leading-relaxed">
                 {service.desc}
               </p>
 
-              {/* 🔥 ALWAYS VISIBLE LINK */}
-              <div className="mt-5 text-[#d4af37] text-sm font-medium">
-                Learn More →
-              </div>
+              {/* LINE */}
+              <div className="relative z-10 mt-5 w-10 h-[2px] bg-[#d4af37] group-hover:w-20 transition-all"></div>
 
             </motion.div>
           ))}
 
-        </div>
-
-        {/* CTA */}
-        <div className="mt-14">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="border border-[#d4af37] text-[#d4af37] px-6 py-3 rounded-md hover:bg-[#d4af37] hover:text-black transition"
-          >
-            View All Services →
-          </motion.button>
         </div>
 
       </div>

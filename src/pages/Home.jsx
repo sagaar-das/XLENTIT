@@ -10,11 +10,11 @@ function Home() {
   return (
     <>
       <Hero />
-      <AboutCompany />
       <ServicesSection />
       <Industries />
+      {/* <AboutCompany />
       <WhyChoose />
-      <Career />
+      <Career /> */}
       <ContactCTA />
     </>
   );
