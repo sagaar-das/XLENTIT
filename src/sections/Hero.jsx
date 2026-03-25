@@ -131,11 +131,11 @@ function Hero() {
             {/* BUTTONS */}
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
               <button className="bg-[#d4af37] text-black px-6 py-3 rounded-md font-semibold">
-                Book Free Session
+                About us
               </button>
 
               <button className="border border-[#d4af37] text-[#d4af37] px-6 py-3 rounded-md">
-                Learn More
+                contact us
               </button>
             </div>
 
