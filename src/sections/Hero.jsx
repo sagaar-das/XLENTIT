@@ -31,7 +31,7 @@ function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 7000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [index]);
@@ -47,14 +47,14 @@ function Hero() {
   return (
     <section className="relative h-[70vh] md:h-[75vh] flex items-center justify-center overflow-hidden">
 
-      {/* 🔥 PROGRESS BAR */}
+      {/* 🔥 PROGRESS BAR
       <motion.div
         key={index}
         initial={{ width: "0%" }}
         animate={{ width: "100%" }}
         transition={{ duration: 7, ease: "linear" }}
         className="absolute top-0 left-0 h-[3px] bg-[#d4af37] z-30"
-      />
+      /> */}
 
       {/* 🔥 BACKGROUND IMAGE */}
       <AnimatePresence>
@@ -129,7 +129,7 @@ function Hero() {
             </p>
 
             {/* BUTTONS */}
-            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+            {/* <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
               <button className="bg-[#d4af37] text-black px-6 py-3 rounded-md font-semibold">
                 About us
               </button>
@@ -137,7 +137,7 @@ function Hero() {
               <button className="border border-[#d4af37] text-[#d4af37] px-6 py-3 rounded-md">
                 contact us
               </button>
-            </div>
+            </div> */}
 
           </motion.div>
         </AnimatePresence>
