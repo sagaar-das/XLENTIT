@@ -1,3 +1,4 @@
+import { FaWhatsapp } from "react-icons/fa";
 
 function WhatsAppButton() {
 
@@ -21,6 +22,7 @@ function WhatsAppButton() {
       </span>
 
       {/* ICON */}
+      <FaWhatsapp size={35} />
       
       
 
