@@ -9,3 +9,44 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Wrapper */
+.phone-input-wrapper {
+  background-color: #1a1a1a;
+  border-radius: 6px;
+  padding: 2px;
+}
+
+/* Input field */
+.phone-input input {
+  background-color: #1a1a1a !important;
+  color: white !important;
+  border: none !important;
+  outline: none !important;
+  width: 100%;
+  padding: 12px 14px;
+}
+
+/* Country button */
+.phone-input .PhoneInputCountry {
+  background-color: #111;
+  padding: 0 10px;
+}
+
+/* Dropdown */
+.phone-input .PhoneInputCountrySelect {
+  background-color: #111 !important;
+  color: white !important;
+}
+
+/* Dropdown options */
+.phone-input .PhoneInputCountrySelect option {
+  background-color: #111;
+  color: white;
+}
+
+/* Focus effect */
+.phone-input input:focus {
+  box-shadow: 0 0 0 2px #d4af37;
+  border-radius: 6px;
+}

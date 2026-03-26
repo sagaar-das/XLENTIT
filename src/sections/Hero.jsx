@@ -1,27 +1,45 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import bg1 from "../assets/bg1.jpg";
-import bg2 from "../assets/bg2.jpg";
-import bg3 from "../assets/bg3.jpg";
+import bg1 from "../assets/service1.jpg";
+import bg2 from "../assets/service2.jpg";
+import bg3 from "../assets/service3.jpg";
+import bg4 from "../assets/service4.jpg";
+import bg5 from "../assets/service5.jpg";
+import bg6 from "../assets/service6.jpg";
 
 function Hero() {
 
   const slides = [
     {
       image: bg1,
-      title: "Transforming Careers Delivering Results",
-      desc: "We help students land high-quality tech jobs through mentorship and real-world preparation.",
+      title: "Software Development",
+      desc: "Build Scalable, High-Performance Software Secure, custom solutions tailored to your business growth.",
     },
     {
       image: bg2,
-      title: "Your Dream Job Starts Here",
-      desc: "Get personalized career guidance and expert support to succeed in the tech industry.",
+      title: "Application Development",
+      desc: "Create Seamless Web & Mobile Applications Modern, user-focused apps built for performance and experience",
     },
     {
       image: bg3,
-      title: "From Learning to Placement",
-      desc: "End-to-end support from training to job placement — we stay with you until you succeed.",
+      title: "Management Consulting",
+      desc: "Drive Smarter Business Decisions Optimize operations and accelerate growth with expert strategies.",
+    },
+    {
+      image: bg4,
+      title: "IT Staffing",
+      desc: "Hire the Right Talent, Faster Skilled IT professionals to support and scale your projects.",
+    },
+    {
+      image: bg5,
+      title: "BPO / KPO",
+      desc: "Streamline Operations Efficiently Cost-effective outsourcing solutions to boost productivity.",
+    },
+    {
+      image: bg6,
+      title: "IoT / AI Development",
+      desc: "Power Your Business with Intelligent Solutions Leverage AI and IoT to automate, innovate, and scale faster.",
     },
   ];
 

@@ -5,6 +5,7 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import WhatsAppButton from "./components/WhatsAppButton";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="services" element={<Services />} />
+          <Route path="/services/:serviceId" element={<Services />} />
           <Route path="about" element={<About />} />
         </Route>
       </Routes>
@@ -21,3 +23,4 @@ function App() {
 }
 
 export default App;
+
