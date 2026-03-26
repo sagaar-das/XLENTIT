@@ -99,21 +99,14 @@ function Services() {
                 onClick={() => handleClick(i)}
                 whileHover={{ scale: 1.03 }}
                 className={`relative w-full text-left px-5 py-4 rounded-xl transition-all duration-300
-                  ${
-                    active === i
-                      ? "bg-[#d4af37] text-black shadow-[0_0_15px_rgba(212,175,55,0.4)]"
-                      : "bg-[#111] text-gray-400 border border-[#2a2a2a] hover:border-[#d4af37]"
+                  ${active === i
+                    ? "bg-[#d4af37] text-black shadow-[0_0_15px_rgba(212,175,55,0.4)]"
+                    : "bg-[#111] text-gray-400 border border-[#2a2a2a] hover:border-[#d4af37]"
                   }`}
               >
                 {s.title}
 
-                {/* Active indicator */}
-                {active === i && (
-                  <motion.span
-                    layoutId="activeIndicator"
-                    className="absolute left-0 top-0 h-full w-1 bg-black rounded-l-xl"
-                  />
-                )}
+                
               </motion.button>
             ))}
           </div>
