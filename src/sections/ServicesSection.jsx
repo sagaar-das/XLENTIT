@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import {
   Code,
   Smartphone,
@@ -10,38 +11,47 @@ import {
 
 function ServicesSection() {
 
+  const navigate = useNavigate();
+
   const services = [
     {
+      id: "software",
       title: "Software Development",
       desc: "We deliver scalable, secure, and high-performance software solutions tailored to business needs.",
       icon: <Code size={28} />,
     },
     {
+      id: "app",
       title: "Application Development",
       desc: "We build user-friendly web and mobile applications designed for performance and seamless experience.",
       icon: <Smartphone size={28} />,
     },
     {
+      id: "consulting",
       title: "Management Consulting",
       desc: "We help businesses optimize operations and drive digital transformation through strategic consulting.",
       icon: <Briefcase size={28} />,
     },
     {
+      id: "it",
       title: "IT Staffing",
       desc: "We connect businesses with top-tier tech talent, ensuring faster hiring and long-term success.",
       icon: <Users size={28} />,
     },
     {
+      id: "bpo",
       title: "BPO / KPO",
       desc: "We provide cost-effective outsourcing solutions to streamline business processes.",
       icon: <Layers size={28} />,
     },
     {
+      id: "ai",
       title: "IoT / AI Development",
       desc: "We leverage AI and IoT to build intelligent systems that drive automation and insights.",
       icon: <Cpu size={28} />,
     },
   ];
+
 
   return (
     <section className="relative bg-[#0D0D0F] py-20 px-6 overflow-hidden">
@@ -65,13 +75,12 @@ function ServicesSection() {
         </p>
 
         <h2 className="text-3xl md:text-5xl font-bold text-white">
-          Everything You Need to <br />
-          <span className="text-[#d4af37]">Land Your Dream Job</span>
+          Turn Your
+          <span className="text-[#d4af37]"> Career Goals </span> into Reality
         </h2>
 
         <p className="mt-5 text-gray-400 max-w-2xl mx-auto">
-          Comprehensive career support designed to take you from where you are
-          to where you want to be.
+          Unlock your full potential with our comprehensive career services. Whether you're starting out or leveling up, we equip you with the skills, confidence, and opportunities to secure your dream job.
         </p>
 
         {/* 🔥 CARDS */}
@@ -80,6 +89,9 @@ function ServicesSection() {
           {services.map((service, i) => (
             <motion.div
               key={i}
+              onClick={() => navigate(`/services/${service.id}`)}
+              cursor-pointer
+              whileTap={{ scale: 0.97 }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}

@@ -1,61 +1,45 @@
 import { motion } from "framer-motion";
+import ServiceSections from "../components/ServiceSections";
 
 function Application() {
-  const services = [
-    "Web Application Development",
-    "Mobile App Development (iOS/Android)",
-    "UI/UX Design",
-    "Application Maintenance & Support",
+  const data = [
+    {
+      title: "Web Applications",
+      description:
+        "We build modern, responsive web applications designed for performance and scalability. Our solutions ensure seamless user experiences across devices, leveraging the latest technologies to deliver fast, secure, and highly interactive platforms tailored to your business needs."
+    },
+    {
+      title: "Mobile Applications",
+      description:
+        "Our team develops intuitive and high-performance mobile applications for both iOS and Android platforms. We focus on usability, speed, and reliability to ensure your users enjoy a smooth and engaging experience across all mobile devices."
+    },
+    {
+      title: "UI/UX Design",
+      description:
+        "We craft visually appealing and user-centric designs that enhance engagement and usability. Our design process focuses on understanding user behavior and delivering seamless experiences that drive satisfaction."
+    },
+    {
+      title: "Maintenance & Support",
+      description:
+        "We provide ongoing maintenance and support services to ensure your applications remain secure, updated, and high-performing. Our proactive approach minimizes downtime and keeps systems aligned with evolving needs."
+    }
   ];
 
   return (
     <section className="text-white">
-
-      {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
         className="text-3xl sm:text-4xl font-bold text-[#d4af37] mb-4"
       >
         Application Development
       </motion.h2>
 
-      {/* Description */}
-      <motion.p
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-gray-300 mb-10 max-w-2xl"
-      >
-        We build user-friendly web and mobile applications designed for performance and seamless
-        user experience.
-      </motion.p>
+      <p className="text-gray-300 max-w-2xl">
+        We build user-friendly web and mobile applications designed for performance and seamless user experience.
+      </p>
 
-      {/* SERVICES LIST */}
-      <div className="space-y-4">
-        {services.map((item, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: i * 0.1 }}
-            viewport={{ once: true }}
-            whileHover={{ x: 8 }}
-            className="group flex items-center gap-4 px-4 py-3 rounded-lg cursor-pointer
-                       hover:bg-[#111] transition duration-300"
-          >
-            {/* GOLD LINE */}
-            <div className="w-1 h-6 bg-[#d4af37] rounded-full group-hover:h-8 transition-all duration-300"></div>
-
-            {/* TEXT */}
-            <p className="text-gray-300 group-hover:text-white transition">
-              {item}
-            </p>
-          </motion.div>
-        ))}
-      </div>
-
+      <ServiceSections data={data} />
     </section>
   );
 }

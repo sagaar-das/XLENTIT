@@ -1,61 +1,45 @@
 import { motion } from "framer-motion";
+import ServiceSections from "../components/ServiceSections";
 
 function AI() {
-  const services = [
-    "AI/ML Model Development",
-    "IoT Solutions & Integration",
-    "Predictive Analytics",
-    "Automation & Smart Systems",
+  const data = [
+    {
+      title: "AI/ML Solutions",
+      description:
+        "We develop intelligent AI and machine learning models that automate processes and generate actionable insights, helping businesses improve efficiency and decision-making."
+    },
+    {
+      title: "IoT Integration",
+      description:
+        "We design and implement IoT solutions that connect devices and systems seamlessly, enabling real-time monitoring and improved operational efficiency."
+    },
+    {
+      title: "Predictive Analytics",
+      description:
+        "We leverage advanced analytics to predict trends, identify opportunities, and mitigate risks, helping businesses stay ahead in a competitive environment."
+    },
+    {
+      title: "Smart Automation",
+      description:
+        "We build automation systems that enhance productivity and reduce manual effort by integrating advanced technologies into intelligent workflows."
+    }
   ];
 
   return (
     <section className="text-white">
-
-      {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
         className="text-3xl sm:text-4xl font-bold text-[#d4af37] mb-4"
       >
         IoT / AI Development
       </motion.h2>
 
-      {/* Description */}
-      <motion.p
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-gray-300 mb-10 max-w-2xl"
-      >
-        We leverage advanced technologies like AI and IoT to build intelligent systems that drive
-        automation and insights.
-      </motion.p>
+      <p className="text-gray-300 max-w-2xl">
+        We leverage advanced technologies like AI and IoT to build intelligent systems that drive automation and insights.
+      </p>
 
-      {/* SERVICES LIST */}
-      <div className="space-y-4">
-        {services.map((item, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: i * 0.1 }}
-            viewport={{ once: true }}
-            whileHover={{ x: 8 }}
-            className="group flex items-center gap-4 px-4 py-3 rounded-lg cursor-pointer
-                       hover:bg-[#111] transition duration-300"
-          >
-            {/* GOLD LINE */}
-            <div className="w-1 h-6 bg-[#d4af37] rounded-full group-hover:h-8 transition-all duration-300"></div>
-
-            {/* TEXT */}
-            <p className="text-gray-300 group-hover:text-white transition">
-              {item}
-            </p>
-          </motion.div>
-        ))}
-      </div>
-
+      <ServiceSections data={data} />
     </section>
   );
 }

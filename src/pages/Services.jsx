@@ -87,7 +87,7 @@ function Services() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row py-16 px-4 sm:px-6 lg:px-8 gap-10">
 
         {/* LEFT SIDEBAR */}
-        <div className="md:w-1/3">
+        <div className="md:w-1/5">
           <h3 className="text-xl mb-6 text-[#d4af37] font-semibold">
             Our Services
           </h3>
