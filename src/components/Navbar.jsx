@@ -131,12 +131,12 @@ function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-black border-t border-[#d4af37]/30 px-6 py-4 space-y-4 text-white"
         >
-          <NavLink to="/" onClick={() => setMenuOpen(false)}>
+          <NavLink to="/" onClick={() => setMenuOpen(false)} className="block">
             Home
           </NavLink>
 
           {/* Mobile Services */}
-          <div className="space-y-2">
+          <NavLink className="space-y-2 block">
             {/* 🔥 Clickable Services Heading */}
             <p
               onClick={() => {
@@ -161,16 +161,18 @@ function Navbar() {
                 {item.name}
               </div>
             ))}
-          </div>
-
-          <NavLink to="/about" onClick={() => setMenuOpen(false)}>
-            About Us
           </NavLink>
 
           {/* ✅ Careers Mobile */}
-          <NavLink to="/careers" onClick={() => setMenuOpen(false)}>
+          <NavLink to="/careers" onClick={() => setMenuOpen(false)} className="block">
             Careers
           </NavLink>
+
+          <NavLink to="/about" onClick={() => setMenuOpen(false)} className="block">
+            About Us
+          </NavLink>
+
+          
         </motion.div>
       )}
     </nav>
