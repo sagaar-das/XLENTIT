@@ -4,8 +4,7 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import WhatsAppButton from "./components/WhatsAppButton";
-
-import Careers from "./pages/careers";
+import Careers from "./pages/Careers";
 
 
 function App() {
