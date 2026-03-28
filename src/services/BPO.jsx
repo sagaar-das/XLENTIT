@@ -30,7 +30,7 @@ function BPO() {
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-3xl sm:text-4xl font-bold text-[#d4af37] mb-4"
+        className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-4"
       >
         BPO / KPO
       </motion.h2>

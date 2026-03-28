@@ -95,7 +95,7 @@ function ContactCTA() {
         <div className="phone-input-wrapper">
           <PhoneInput
             international
-            defaultCountry="IN"
+            defaultCountry="US"
             placeholder="Phone number"
             className="phone-input text-sm"
           />
@@ -105,15 +105,15 @@ function ContactCTA() {
         <input
           type="text"
           placeholder="Location"
-          className="bg-[#1a1a1a] px-3 py-2.5 rounded-md text-white text-sm focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+          className="bg-[#1a1a1a] px-3 py-2.5 rounded-md text-white text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
         />
 
         {/* TERMS */}
         <div className="flex items-start gap-2 text-xs text-gray-400">
-          <input type="checkbox" className="mt-1 accent-[#d4af37]" />
+          <input type="checkbox" className="mt-1 accent-yellow-400" />
           <p>
             I agree to the{" "}
-            <span className="text-[#d4af37] cursor-pointer">
+            <span className="text-yellow-400 cursor-pointer">
               Terms
             </span>
           </p>
@@ -122,7 +122,7 @@ function ContactCTA() {
         {/* BUTTON */}
         <motion.button
           whileHover={{ scale: 1.03 }}
-          className="mt-2 bg-[#d4af37] text-black py-2.5 rounded-md font-medium text-sm"
+          className="mt-2 bg-yellow-400 text-black py-2.5 rounded-md font-medium text-sm"
         >
           Submit
         </motion.button>

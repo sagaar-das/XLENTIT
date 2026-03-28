@@ -49,7 +49,7 @@ function Industries() {
 
 
         {/* 🔥 HEADER */}
-        <p className="text-[#d4af37] text-sm tracking-widest mb-3">
+        <p className="text-yellow-400 text-sm tracking-widest mb-3">
           INDUSTRIES
         </p>
 
@@ -70,16 +70,16 @@ function Industries() {
                 initial={{ opacity: 0, x: isLeft ? -40 : 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="group bg-[#111] border border-[#2a2a2a] rounded-xl p-6 flex flex-col items-center justify-center text-center transition-all hover:border-[#d4af37] hover:-translate-y-1"
+                className="group bg-[#111] border border-[#2a2a2a] rounded-xl p-6 flex flex-col items-center justify-center text-center transition-all hover:border-yellow-400 hover:-translate-y-1"
               >
 
                 {/* ICON */}
-                <div className="w-14 h-14 rounded-lg bg-[#262626] flex items-center justify-center text-[#d4af37] mb-4 group-hover:scale-110 transition">
+                <div className="w-14 h-14 rounded-lg bg-[#262626] flex items-center justify-center text-yellow-400 mb-4 group-hover:scale-110 transition">
                   {item.icon}
                 </div>
 
                 {/* NAME */}
-                <p className="text-sm text-white group-hover:text-[#d4af37] transition">
+                <p className="text-sm text-white group-hover:text-yellow-400 transition">
                   {item.name}
                 </p>
 

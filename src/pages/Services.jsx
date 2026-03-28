@@ -75,7 +75,7 @@ function Services() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-5xl font-bold text-[#d4af37]"
+            className="text-3xl sm:text-5xl font-bold text-yellow-400"
           >
             {currentService.title}
           </motion.h1>
@@ -88,7 +88,7 @@ function Services() {
 
         {/* LEFT SIDEBAR */}
         <div className="md:w-1/5">
-          <h3 className="text-xl mb-6 text-[#d4af37] font-semibold">
+          <h3 className="text-xl mb-6 text-yellow-400 font-semibold">
             Our Services
           </h3>
 
@@ -100,8 +100,8 @@ function Services() {
                 whileHover={{ scale: 1.03 }}
                 className={`relative w-full text-left px-5 py-4 rounded-xl transition-all duration-300
                   ${active === i
-                    ? "bg-[#d4af37] text-black shadow-[0_0_15px_rgba(212,175,55,0.4)]"
-                    : "bg-[#111] text-gray-400 border border-[#2a2a2a] hover:border-[#d4af37]"
+                    ? "bg-yellow-400 text-black shadow-[0_0_15px_rgba(212,175,55,0.4)]"
+                    : "bg-[#111] text-gray-400 border border-[#2a2a2a] hover:border-yellow-400"
                   }`}
               >
                 {s.title}
@@ -113,12 +113,12 @@ function Services() {
         </div>
 
         {/* RIGHT CONTENT */}
-        <div className="md:w-2/3 relative">
+        <div className="md:w-4/5 relative">
 
           {/* Loader */}
           {loading && (
             <div className="absolute inset-0 bg-black/80 flex items-center justify-center z-20 backdrop-blur-sm">
-              <div className="w-10 h-10 border-4 border-[#d4af37] border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-10 h-10 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
             </div>
           )}
 

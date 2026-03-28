@@ -19,7 +19,7 @@ function Footer() {
           {/* LEFT - LOGO */}
           <div>
             <h1 className="text-white text-2xl font-bold mb-4">
-              <span className="text-yellow-300">Xlent</span>IT
+              <span className="text-yellow-400">Xlent</span>IT
             </h1>
 
             <p className="max-w-sm text-sm leading-relaxed">

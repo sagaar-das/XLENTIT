@@ -5,6 +5,8 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import WhatsAppButton from "./components/WhatsAppButton";
 
+import Careers from "./pages/careers";
+
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="services" element={<Services />} />
           <Route path="/services/:serviceId" element={<Services />} />
+          
+          <Route path="careers" element={<Careers />} />
           <Route path="about" element={<About />} />
         </Route>
       </Routes>

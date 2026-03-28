@@ -65,14 +65,7 @@ function Hero() {
   return (
     <section className="relative h-[70vh] md:h-[75vh] flex items-center justify-center overflow-hidden">
 
-      {/* 🔥 PROGRESS BAR
-      <motion.div
-        key={index}
-        initial={{ width: "0%" }}
-        animate={{ width: "100%" }}
-        transition={{ duration: 7, ease: "linear" }}
-        className="absolute top-0 left-0 h-[3px] bg-[#d4af37] z-30"
-      /> */}
+      
 
       {/* 🔥 BACKGROUND IMAGE */}
       <AnimatePresence>

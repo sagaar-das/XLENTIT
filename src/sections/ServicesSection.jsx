@@ -54,7 +54,7 @@ function ServicesSection() {
 
 
   return (
-    <section className="relative bg-[#0D0D0F] py-20 px-6 overflow-hidden">
+    <section className="relative bg-[#1a1a1a] py-20 px-6 overflow-hidden">
 
       {/* 🔥 GRID BACKGROUND */}
       <div className="absolute inset-0 opacity-10"
@@ -70,13 +70,13 @@ function ServicesSection() {
       <div className="relative z-10 max-w-7xl mx-auto text-center">
 
         {/* HEADER */}
-        <p className="text-[#d4af37] text-sm tracking-widest mb-3">
+        <p className="text-yellow-400 text-sm tracking-widest mb-3">
           OUR SERVICES
         </p>
 
         <h2 className="text-3xl md:text-5xl font-bold text-white">
           Turn Your
-          <span className="text-[#d4af37]"> Career Goals </span> into Reality
+          <span className="text-yellow-400"> Career Goals </span> into Reality
         </h2>
 
         <p className="mt-5 text-gray-400 max-w-2xl mx-auto">
@@ -100,11 +100,10 @@ function ServicesSection() {
                 rotateY: -5,
                 scale: 1.03,
               }}
-              className="group relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 text-left transition-all duration-300"
+              className="group relative backdrop-blur-xl bg-[#111] border border-gray-800 rounded-2xl p-6 text-left  text-white hover:text-yellow-400 hover:border-yellow-400  hover:shadow-[0_0_25px_rgba(255,215,0,0.4)] transition-all duration-300"
             >
 
-              {/* 🔥 GLOW BORDER */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.2),transparent_60%)]"></div>
+              
 
               {/* ICON */}
               <motion.div
@@ -115,13 +114,13 @@ function ServicesSection() {
                   duration: 2,
                   repeat: Infinity,
                 }}
-                className="relative z-10 w-14 h-14 rounded-lg bg-[#0D0D0F] flex items-center justify-center text-[#d4af37] mb-5"
+                className="relative z-10 w-14 h-14 rounded-lg bg-[#0D0D0F] flex items-center justify-center text-yellow-400 mb-5"
               >
                 {service.icon}
               </motion.div>
 
               {/* TITLE */}
-              <h3 className="relative z-10 text-lg font-semibold text-white group-hover:text-[#d4af37] transition">
+              <h3 className="relative z-10 text-lg font-semibold text-white group-hover:text-yellow-400 transition">
                 {service.title}
               </h3>
 
@@ -131,7 +130,7 @@ function ServicesSection() {
               </p>
 
               {/* LINE */}
-              <div className="relative z-10 mt-5 w-10 h-[2px] bg-[#d4af37] group-hover:w-20 transition-all"></div>
+              <div className="relative z-10 mt-5 w-10 h-[2px] bg-yellow-400 group-hover:w-20 transition-all"></div>
 
             </motion.div>
           ))}

@@ -9,7 +9,7 @@ function IT() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-3xl sm:text-4xl font-bold text-[#d4af37] mb-4"
+        className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-4"
       >
         IT Staffing
       </motion.h2>
@@ -33,7 +33,7 @@ function IT() {
         className="flex flex-col items-center justify-center py-12 text-center"
       >
         {/* Gold Line Accent */}
-        <div className="w-12 h-[2px] bg-[#d4af37] mb-4"></div>
+        <div className="w-12 h-[2px] bg-yellow-400 mb-4"></div>
 
         {/* Message */}
         <p className="text-gray-400">
