@@ -98,7 +98,7 @@ function ServicesSection() {
         </p>
 
         {/* 🔥 CARDS */}
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 ... will-change-transform">
 
           {services.map((service, i) => (
 
@@ -114,12 +114,10 @@ function ServicesSection() {
             >
 
               {/* 🔥 Background Image */}
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-opacity duration-500 group-hover:opacity-0"
-                style={{
-                  backgroundImage: `url(${service.image})`
-                }}
-
+              <img
+                src={service.image}
+                alt={service.title}
+                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0 will-change-opacity"
               />
 
               {/* 🔥 Dark Overlay for readability */}
@@ -130,8 +128,7 @@ function ServicesSection() {
 
                 {/* ICON */}
                 <motion.div
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
+                  whileHover={{ y: -3 }}
                   className="w-14 h-14 rounded-lg bg-[#0D0D0F] flex items-center justify-center text-yellow-400 mb-5"
                 >
                   {service.icon}
