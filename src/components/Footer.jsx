@@ -1,100 +1,93 @@
 import { motion } from "framer-motion";
+import { Mail, Phone, MapPin } from "lucide-react";
+import FooterBrand from "./FooterBrand";
+
+
 
 function Footer() {
   return (
-    <footer className="relative bg-black text-gray-400 pt-20 pb-10 px-6 overflow-hidden">
+    <footer className="bg-black border-t border-[#d4af37]/20 py-16 px-6">
 
-      {/* BIG BACKGROUND TEXT */}
-      <div className="absolute inset-0 flex items-end justify-center pointer-events-none">
-        <h1 className="text-[80px] sm:text-[140px] md:text-[220px] font-bold text-white/5 select-none leading-none">
-          XLENTIT
-        </h1>
-      </div>
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* 🔥 LEFT SIDE */}
+        <div className="text-gray-400 text-sm space-y-6">
 
-        {/* TOP SECTION */}
-        <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+          {/* LOGO TEXT */}
+          <h2 className="text-white text-2xl font-bold">
+            XlentIT
+          </h2>
 
-          {/* LEFT - LOGO */}
+          <p>
+            Your trusted partner in career success. We provide end-to-end career support with personal mentorship and dedicated job assistance until placement.
+          </p>
+
+          {/* SERVICES */}
           <div>
-            <h1 className="text-white text-2xl font-bold mb-4">
-              <span className="text-yellow-400">Xlent</span>IT
-            </h1>
+            <h3 className="text-white mb-2">Services</h3>
+            <ul className="space-y-1">
+              <li className="hover:text-yellow-400 cursor-pointer">1-on-1 Mentorship</li>
+              <li className="hover:text-yellow-400 cursor-pointer">Mock Interviews</li>
+              <li className="hover:text-yellow-400 cursor-pointer">Resume Building</li>
+              <li className="hover:text-yellow-400 cursor-pointer">IT Staffing</li>
+            </ul>
+          </div>
 
-            <p className="max-w-sm text-sm leading-relaxed">
-              Your trusted partner in career success. We provide end-to-end career support with personal mentorship and dedicated job assistance until placement.
+          {/* COMPANY */}
+          <div>
+            <h3 className="text-white mb-2">Company</h3>
+            <ul className="space-y-1">
+              <li className="hover:text-yellow-400 cursor-pointer">About Us</li>
+              <li className="hover:text-yellow-400 cursor-pointer">How It Works</li>
+              <li className="hover:text-yellow-400 cursor-pointer">Success Stories</li>
+              <li className="hover:text-yellow-400 cursor-pointer">Contact</li>
+            </ul>
+          </div>
+
+          {/* CONTACT */}
+          <div className="space-y-2">
+
+            <div className="flex items-center gap-2">
+              <Mail size={16} className="text-yellow-400" />
+              <span>info@xlent-itservice.com</span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Phone size={16} className="text-yellow-400" />
+              <span>+1 (424) 246-2343</span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <MapPin size={16} className="text-yellow-400" />
+              <span>823 Congress Ave. STE 300, Austin, TX 78701</span>
+            </div>
+
+          </div>
+
+          {/* SOCIAL */}
+          <div className="flex gap-4 pt-2">
+            {["in", "f", "ig"].map((item, i) => (
+              <div
+                key={i}
+                className="w-9 h-9 flex items-center justify-center border border-gray-700 rounded-md text-gray-300 hover:text-yellow-400 hover:border-yellow-400 transition cursor-pointer"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+
+          {/* COPYRIGHT */}
+          <div className="pt-6 border-t border-gray-800 text-xs flex flex-col sm:flex-row justify-between gap-2">
+            <p>© 2026 XlentIT. All rights reserved.</p>
+            <p className="hover:text-yellow-400 cursor-pointer">
+              Privacy Policy
             </p>
           </div>
 
-          {/* CENTER LINKS */}
-          <div className="flex flex-col sm:flex-row gap-10 text-sm">
-
-            {/* Services */}
-            <div>
-              <h3 className="text-white mb-4 font-semibold">Services</h3>
-              <ul className="space-y-2">
-                <li className="hover:text-white cursor-pointer">1-on-1 Mentorship</li>
-                <li className="hover:text-white cursor-pointer">Mock Interviews</li>
-                <li className="hover:text-white cursor-pointer">Resume Building</li>
-                <li className="hover:text-white cursor-pointer">IT Staffing</li>
-              </ul>
-            </div>
-
-            {/* Company */}
-            <div>
-              <h3 className="text-white mb-4 font-semibold">Company</h3>
-              <ul className="space-y-2">
-                <li className="hover:text-white cursor-pointer">About Us</li>
-                <li className="hover:text-white cursor-pointer">How It Works</li>
-                <li className="hover:text-white cursor-pointer">Success Stories</li>
-                <li className="hover:text-white cursor-pointer">Contact</li>
-              </ul>
-            </div>
-
-            {/* Contact */}
-            <div>
-              <h3 className="text-white mb-4 font-semibold">Contact</h3>
-              <ul className="space-y-2">
-                <li>✉ info@xlent-itservice.com</li>
-                <li>+1 (424) 246-2343</li>
-                <li>
-                  823 Congress Ave. STE 300 <br /> Austin, TX 78701
-                </li>
-              </ul>
-            </div>
-
-          </div>
-
-          {/* RIGHT - SOCIAL */}
-          <div className="flex gap-4">
-
-            <motion.div whileHover={{ scale: 1.1 }} className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center hover:bg-white/20 transition cursor-pointer">
-              in
-            </motion.div>
-
-            <motion.div whileHover={{ scale: 1.1 }} className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center hover:bg-white/20 transition cursor-pointer">
-              f
-            </motion.div>
-
-            <motion.div whileHover={{ scale: 1.1 }} className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center hover:bg-white/20 transition cursor-pointer">
-              ig
-            </motion.div>
-
-          </div>
-
         </div>
 
-        {/* BOTTOM */}
-        <div className="mt-16 flex flex-col md:flex-row justify-between items-center text-sm border-t border-white/10 pt-6">
-
-          <p>© 2026 XlentIT. All rights reserved.</p>
-
-          <p className="mt-4 md:mt-0 hover:text-white cursor-pointer">
-            Privacy Policy
-          </p>
-
-        </div>
+        {/* 🔥 RIGHT SIDE (ANIMATED BRAND) */}
+        <FooterBrand />
 
       </div>
 
