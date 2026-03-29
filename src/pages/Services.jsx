@@ -23,9 +23,9 @@ function Services() {
 
   const services = [
     { id: "software", title: "Software Development", image: bg1, component: <Software /> },
+    { id: "it", title: "IT Staffing", image: bg4, component: <IT /> },
     { id: "app", title: "Application Development", image: bg2, component: <Application /> },
     { id: "consulting", title: "Management Consulting", image: bg3, component: <Consulting /> },
-    { id: "it", title: "IT Staffing", image: bg4, component: <IT /> },
     { id: "bpo", title: "BPO / KPO", image: bg5, component: <BPO /> },
     { id: "ai", title: "IoT / AI Development", image: bg6, component: <AI /> },
   ];
@@ -103,7 +103,7 @@ function Services() {
                 whileHover={{ scale: 1.03 }}
                 className={`relative w-full text-left px-5 py-4 rounded-xl transition-all duration-300
                   ${active === i
-                    ? "bg-yellow-400 text-black shadow-[0_0_15px_rgba(212,175,55,0.4)]"
+                    ? "bg-yellow-400 text-black"
                     : "bg-[#111] text-gray-400 border border-[#2a2a2a] hover:border-yellow-400"
                   }`}
               >
