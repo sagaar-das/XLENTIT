@@ -74,7 +74,7 @@ export default function FooterBrand() {
             className="flex flex-col items-center absolute"
             style={{ willChange: "transform" }}
           >
-            {Array(4).fill("XlentIT").map((w, j) => (
+            {Array(4).fill("XlENTIT").map((w, j) => (
               <span key={j} style={wordStyle}>{w}</span>
             ))}
           </div>
@@ -83,3 +83,4 @@ export default function FooterBrand() {
     </div>
   );
 }
+
