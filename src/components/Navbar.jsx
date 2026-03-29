@@ -1,7 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 import { Menu, X } from "lucide-react";
 
 function Navbar() {
@@ -33,6 +33,7 @@ function Navbar() {
         >
           <img
             src={logo}
+            loading="lazy"
             alt="XLENT-IT Logo"
             className="h-10 md:h-12 w-auto object-contain"
           />

@@ -1,44 +1,45 @@
 import { motion } from "framer-motion";
+import ScrollReveal from "../components/ScrollReveal";
+import AnimatedHeading from "../components/AnimatedHeading";
+import AnimatedText from "../components/AnimatedText";
 
 function IT() {
   return (
-    <section className="text-white">
+    <section className="text-white px-6 py-16 max-w-7xl mx-auto">
 
-      {/* Heading */}
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+      {/* 🔥 Heading (Left → Right Reveal) */}
+      <AnimatedHeading
+        text="IT Staffing"
         className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-4"
-      >
-        IT Staffing
-      </motion.h2>
+      />
 
-      {/* Description */}
-      <motion.p
+      {/* 🔥 Description (Scroll Reveal) */} 
+      <AnimatedText className="text-center text-gray-400 mb-10" delay={0.5}>
+         We connect businesses with top-tier IT professionals, ensuring faster hiring and long-term success.
+      </AnimatedText>
+
+
+      {/* 🔥 EMPTY STATE (Premium) */}
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-gray-300 mb-10 max-w-2xl"
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="flex flex-col items-center justify-center py-16 text-center border border-gray-800 rounded-xl bg-[#111]/80"
       >
-        (No content as per your instruction — leave section placeholder or simple heading)
-      </motion.p>
 
-      {/* EMPTY STATE DESIGN */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="flex flex-col items-center justify-center py-12 text-center"
-      >
-        {/* Gold Line Accent */}
-        <div className="w-12 h-[2px] bg-yellow-400 mb-4"></div>
+        {/* Accent Line */}
+        <div className="w-12 h-[2px] bg-yellow-400 mb-5"></div>
+
+        {/* Title */}
+        <h3 className="text-lg font-semibold text-white mb-2">
+          Content Coming Soon
+        </h3>
 
         {/* Message */}
-        <p className="text-gray-400">
-          Content will be updated soon.
+        <p className="text-gray-400 text-sm max-w-md">
+          We are currently updating this section with detailed information about our IT staffing services.
         </p>
+
       </motion.div>
 
     </section>

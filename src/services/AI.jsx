@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
+import ScrollReveal from "../components/ScrollReveal";
 import ServiceSections from "../components/ServiceSections";
+import AnimatedHeading from "../components/AnimatedHeading";
+import AnimatedText from "../components/AnimatedText";
 
 function AI() {
+
   const data = [
     {
       title: "AI/ML Solutions",
@@ -26,20 +30,24 @@ function AI() {
   ];
 
   return (
-    <section className="text-white">
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+    <section className="text-white px-6 py-16 max-w-7xl mx-auto">
+
+      {/* 🔥 Heading (Left → Right Reveal) */}
+      <AnimatedHeading
+        text="IoT / AI Development"
         className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-4"
-      >
-        IoT / AI Development
-      </motion.h2>
+      />
 
-      <p className="text-gray-300 max-w-2xl">
-        We leverage advanced technologies like AI and IoT to build intelligent systems that drive automation and insights.
-      </p>
+      {/* 🔥 Description (Scroll Reveal) */} 
+      <AnimatedText className="text-center text-gray-400 mb-10" delay={0.5}>
+       We leverage advanced technologies like AI and IoT to build intelligent systems that drive automation and insights.
+      </AnimatedText>
 
-      <ServiceSections data={data} />
+      {/* 🔥 Sections */}
+      <div className="mt-12">
+        <ServiceSections data={data} />
+      </div>
+
     </section>
   );
 }

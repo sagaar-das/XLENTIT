@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
+import ScrollReveal from "../components/ScrollReveal";
 import ServiceSections from "../components/ServiceSections";
+import AnimatedHeading from "../components/AnimatedHeading";
+import AnimatedText from "../components/AnimatedText";
 
 function Software() {
 
@@ -27,24 +30,23 @@ function Software() {
   ];
 
   return (
-    <section className="text-white">
+    <section className="text-white px-6 py-16 max-w-7xl mx-auto">
 
-      {/* Heading */}
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+      {/* 🔥 Heading (Left → Right Reveal) */}
+      <AnimatedHeading
+        text="Software Development"
         className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-4"
-      >
-        Software Development
-      </motion.h2>
+      />
 
-      {/* Description */}
-      <p className="text-gray-300 max-w-2xl">
+      {/* 🔥 Description (Scroll Reveal) */} 
+      <AnimatedText className="text-center text-gray-400 mb-10" delay={0.5}>
         We deliver scalable, secure, and high-performance software solutions tailored to business needs.
-      </p>
+      </AnimatedText>
 
-      {/* 🔥 Sections */}
-      <ServiceSections data={data} />
+      {/* 🔥 Sections (pass animation-ready data) */}
+      <div className="mt-12">
+        <ServiceSections data={data} />
+      </div>
 
     </section>
   );

@@ -9,12 +9,13 @@ import IT from "../services/IT";
 import BPO from "../services/BPO";
 import AI from "../services/AI";
 
-import bg1 from "../assets/service1.jpg";
-import bg2 from "../assets/service2.jpg";
-import bg3 from "../assets/service3.jpg";
-import bg4 from "../assets/service4.jpg";
-import bg5 from "../assets/service5.jpg";
-import bg6 from "../assets/service6.jpg";
+import bg1 from "../assets/service1.webp";
+import bg2 from "../assets/service2.webp";
+import bg3 from "../assets/service3.webp";
+import bg4 from "../assets/service4.webp";
+import bg5 from "../assets/service5.webp";
+import bg6 from "../assets/service6.webp";
+import AnimatedHeading from "../components/AnimatedHeading";
 
 function Services() {
   const { serviceId } = useParams();
@@ -62,7 +63,8 @@ function Services() {
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center "
+          loading="lazy"
           style={{ backgroundImage: `url(${currentService.image})` }}
         />
 
@@ -77,8 +79,9 @@ function Services() {
             transition={{ duration: 0.6 }}
             className="text-3xl sm:text-5xl font-bold text-yellow-400"
           >
-            {currentService.title}
+            {currentService.title} Service
           </motion.h1>
+      
         </div>
 
       </div>
@@ -106,7 +109,7 @@ function Services() {
               >
                 {s.title}
 
-                
+
               </motion.button>
             ))}
           </div>

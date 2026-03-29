@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import ScrollReveal from "../components/ScrollReveal";
 
-import bg1 from "../assets/service1.jpg";
-import bg2 from "../assets/service2.jpg";
-import bg3 from "../assets/service3.jpg";
-import bg4 from "../assets/service4.jpg";
-import bg5 from "../assets/service5.jpg";
-import bg6 from "../assets/service6.jpg";
+import bg1 from "../assets/service1.webp";
+import bg2 from "../assets/service2.webp";
+import bg3 from "../assets/service3.webp";
+import bg4 from "../assets/service4.webp";
+import bg5 from "../assets/service5.webp";
+import bg6 from "../assets/service6.webp";
+import AnimatedHeading from "../components/AnimatedHeading";
 
 function Hero() {
 
@@ -14,45 +16,45 @@ function Hero() {
     {
       image: bg1,
       title: "Software Development",
-      desc: "Build Scalable, High-Performance Software Secure, custom solutions tailored to your business growth.",
+      desc: "Build scalable, high-performance software tailored to your business growth.",
     },
     {
       image: bg2,
       title: "Application Development",
-      desc: "Create Seamless Web & Mobile Applications Modern, user-focused apps built for performance and experience",
+      desc: "Create seamless web & mobile apps with modern performance and UX.",
     },
     {
       image: bg3,
       title: "Management Consulting",
-      desc: "Drive Smarter Business Decisions Optimize operations and accelerate growth with expert strategies.",
+      desc: "Optimize operations and accelerate growth with expert strategies.",
     },
     {
       image: bg4,
       title: "IT Staffing",
-      desc: "Hire the Right Talent, Faster Skilled IT professionals to support and scale your projects.",
+      desc: "Hire skilled IT professionals to scale your projects faster.",
     },
     {
       image: bg5,
       title: "BPO / KPO",
-      desc: "Streamline Operations Efficiently Cost-effective outsourcing solutions to boost productivity.",
+      desc: "Boost productivity with cost-effective outsourcing solutions.",
     },
     {
       image: bg6,
       title: "IoT / AI Development",
-      desc: "Power Your Business with Intelligent Solutions Leverage AI and IoT to automate, innovate, and scale faster.",
+      desc: "Leverage AI & IoT to automate, innovate, and scale faster.",
     },
   ];
 
   const [index, setIndex] = useState(0);
 
-  // 🔥 AUTO SLIDE (7 sec)
+  // 🔥 Auto slide (optimized)
   useEffect(() => {
     const interval = setInterval(() => {
-      nextSlide();
-    }, 3000);
+      setIndex((prev) => (prev + 1) % slides.length);
+    }, 4000);
 
     return () => clearInterval(interval);
-  }, [index]);
+  }, []);
 
   const nextSlide = () => {
     setIndex((prev) => (prev + 1) % slides.length);
@@ -63,92 +65,56 @@ function Hero() {
   };
 
   return (
-    <section className="relative h-[70vh] md:h-[75vh] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[75vh] flex items-center justify-center overflow-hidden">
 
-      
-
-      {/* 🔥 BACKGROUND IMAGE */}
-      <AnimatePresence>
-        <motion.div
+      {/* 🔥 Background Image */}
+      <AnimatePresence mode="wait">
+        <motion.img
           key={index}
+          src={slides[index].image}
+          alt=""
+          loading="eager"
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${slides[index].image})` }}
+          transition={{ duration: 0.7 }}
+          className="absolute inset-0 w-full h-full object-cover"
         />
       </AnimatePresence>
 
-      {/* 🔥 DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/70"></div>
+      {/* 🔥 Overlay */}
+      <div className="absolute inset-0 bg-black/60" />
 
-      {/* 🔥 CONTENT */}
+      {/* 🔥 Content */}
       <div className="relative z-10 max-w-3xl text-center px-6">
 
         <AnimatePresence mode="wait">
-          {/* 🔥 SWIPE SUPPORT */}
           <motion.div
             key={index}
-
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             onDragEnd={(e, info) => {
-              if (info.offset.x < -100) nextSlide();
-              if (info.offset.x > 100) prevSlide();
+              if (info.offset.x < -80) nextSlide();
+              if (info.offset.x > 80) prevSlide();
             }}
-
-            
-            initial={
-              index === 0
-                ? { opacity: 0, x: -80 }
-                : index === 1
-                ? { opacity: 0, y: 80 }
-                : { opacity: 0, scale: 0.8 }
-            }
-
-            animate={
-              index === 0
-                ? { opacity: 1, x: 0 }
-                : index === 1
-                ? { opacity: 1, y: 0 }
-                : { opacity: 1, scale: 1 }
-            }
-
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.7 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.5 }}
           >
 
-            {/* 🔥 WORD-BY-WORD ANIMATION */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white flex flex-wrap justify-center">
-              {slides[index].title.split(" ").map((word, i) => (
-                <motion.span
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.08 }}
-                  className="mr-2"
-                >
-                  {word}
-                </motion.span>
-              ))}
-            </h1>
+            {/* 🔥 TITLE (Left → Right reveal) */}
+            <AnimatedHeading
+              text={slides[index].title}
+              className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-5"
+            />
 
-            {/* DESCRIPTION */}
-            <p className="mt-6 text-gray-300 text-sm sm:text-base">
-              {slides[index].desc}
-            </p>
-
-            {/* BUTTONS */}
-            {/* <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-              <button className="bg-[#d4af37] text-black px-6 py-3 rounded-md font-semibold">
-                About us
-              </button>
-
-              <button className="border border-[#d4af37] text-[#d4af37] px-6 py-3 rounded-md">
-                contact us
-              </button>
-            </div> */}
+            {/* 🔥 DESCRIPTION (ScrollReveal applied) */}
+            <ScrollReveal delay={0.3} direction="up">
+              <p className="mt-6 text-gray-300 text-sm sm:text-base">
+                {slides[index].desc}
+              </p>
+            </ScrollReveal>
 
           </motion.div>
         </AnimatePresence>
