@@ -147,6 +147,10 @@ function ServicesSection() {
                     {service.desc}
                   </p>
 
+                  <p className="mt-3 text-yellow-400 text-sm leading-relaxed opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                    Know more →
+                  </p>
+
                 </div>
 
                 {/* LINE */}

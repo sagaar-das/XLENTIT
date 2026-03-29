@@ -2,7 +2,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 function WhatsAppButton() {
 
-  const phoneNumber = "917808517844"; // 👉 replace with your number (with country code, no +)
+  const phoneNumber = "+17808517844"; // 👉 replace with your number (with country code, no +)
 
   const message = "Hi, I need help regarding your services";
 

@@ -87,7 +87,7 @@ function Navbar() {
                     className="px-3 py-2 rounded-md hover:bg-[#1a1a1a] hover:text-[#d4af37] cursor-pointer transition flex justify-between items-center"
                   >
                     {item.name}
-                    <span className="text-xs">→</span>
+                    <span className="text-xs">↓</span>
                   </div>
                 ))}
               </motion.div>
@@ -96,7 +96,7 @@ function Navbar() {
 
            {/* ✅ Careers */}
           <NavLink to="/careers" className={navLinkClass}>
-            Careers
+            Careers <span className="text-xs">↓</span>
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#d4af37] transition-all group-hover:w-full"></span>
           </NavLink>
 
@@ -158,7 +158,7 @@ function Navbar() {
                 }}
                 className="pl-3 text-gray-300 hover:text-[#d4af37] cursor-pointer"
               >
-                {item.name}
+                {item.name} <span className="text-xs">↓</span>
               </div>
             ))}
           </NavLink>
