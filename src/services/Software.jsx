@@ -4,7 +4,6 @@ import AnimatedText from "../components/AnimatedText";
 import { useNavigate } from "react-router-dom";
 
 function Software() {
-
   const navigate = useNavigate();
 
   const services = [
@@ -41,89 +40,93 @@ function Software() {
   ];
 
   return (
-    <section className="text-white px-6 py-16 max-w-7xl mx-auto">
+    <div className="w-full bg-black text-white py-20">
 
-      {/* 🔥 Heading */}
-      <AnimatedHeading
-        text="Software Development"
-        className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-4"
-      />
+      {/* 🔥 CENTERED CONTENT WRAPPER */}
+      <div className="w-full px-4 sm:px-6 lg:px-12">
 
-      {/* 🔥 Subheading */}
-      <AnimatedText className="text-center text-gray-400 mb-10" delay={0.4}>
-        We deliver scalable, secure, and high-performance software solutions tailored to business needs.
-      </AnimatedText>
+        {/* 🔥 HEADING SECTION */}
+        <div className="max-w-4xl mx-auto text-center">
 
-      {/* 🔥 CARDS SECTION */}
-      <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <AnimatedHeading
+            text="Software Development"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-400 mb-4"
+          />
 
-        {services.map((item, i) => (
-
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.08 }}
-            whileHover={{ scale: 1.05 }}
-            className="group relative overflow-hidden rounded-2xl p-[1px] bg-gradient-to-br from-yellow-400/30 via-transparent to-yellow-400/30"
+          <AnimatedText
+            className="text-gray-400 mb-12 text-sm sm:text-base"
+            delay={0.4}
           >
+            We deliver scalable, secure, and high-performance software solutions tailored to business needs.
+          </AnimatedText>
 
-            {/* 🔥 INNER CARD */}
-            <div className="relative h-full flex flex-col justify-between bg-[#0d0d0f]/90 backdrop-blur-md rounded-2xl p-6 border border-gray-800 transition duration-300 group-hover:border-yellow-400">
+        </div>
 
-              {/* 🔥 GLOW */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none">
-                <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400/10 blur-3xl rounded-full"></div>
-                <div className="absolute bottom-0 right-0 w-40 h-40 bg-yellow-400/10 blur-3xl rounded-full"></div>
+        {/* 🔥 CARDS GRID (FULL WIDTH CONTROLLED) */}
+        <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {services.map((item, i) => (
+
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              whileHover={{ scale: 1.04 }}
+              className="group relative overflow-hidden rounded-2xl p-[1px] bg-gradient-to-br from-yellow-400/30 via-transparent to-yellow-400/30"
+            >
+
+              {/* 🔥 INNER CARD */}
+              <div className="relative h-full flex flex-col justify-between bg-[#0d0d0f]/90 backdrop-blur-md rounded-2xl p-6 border border-gray-800 transition duration-300 group-hover:border-yellow-400">
+
+                {/* 🔥 GLOW */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none">
+                  <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400/10 blur-3xl rounded-full"></div>
+                  <div className="absolute bottom-0 right-0 w-40 h-40 bg-yellow-400/10 blur-3xl rounded-full"></div>
+                </div>
+
+                {/* 🔥 CONTENT */}
+                <div className="relative z-10">
+
+                  <h3 className="text-lg font-semibold text-white mb-2 transition duration-300 group-hover:text-yellow-400">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-gray-400 text-sm mb-4">
+                    {item.desc}
+                  </p>
+
+                  <p className="text-xs text-gray-500 mb-3">
+                    <span className="text-gray-300 font-medium">Best for:</span> {item.best}
+                  </p>
+
+                  <ul className="space-y-1 text-sm text-gray-300 mb-6">
+                    {item.points.map((point, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center gap-2 group-hover:text-yellow-400 transition"
+                      >
+                        <span className="text-yellow-400">✔</span> {point}
+                      </li>
+                    ))}
+                  </ul>
+
+                </div>
+
+          
+
               </div>
 
-              {/* 🔥 CONTENT */}
-              <div className="relative z-10">
+            </motion.div>
 
-                <h3 className="text-lg font-semibold text-white mb-2 transition duration-300 group-hover:text-yellow-400">
-                  {item.title}
-                </h3>
+          ))}
 
-                <p className="text-gray-400 text-sm mb-4">
-                  {item.desc}
-                </p>
-
-                <p className="text-xs text-gray-500 mb-3">
-                  <span className="text-gray-300 font-medium">Best for:</span> {item.best}
-                </p>
-
-                <ul className="space-y-1 text-sm text-gray-300 mb-6">
-                  {item.points.map((point, idx) => (
-                    <li key={idx} className="flex items-center gap-2 group-hover:text-yellow-400 transition">
-                      <span className="text-yellow-400">✔</span> {point}
-                    </li>
-                  ))}
-                </ul>
-
-              </div>
-
-              {/* 🔥 CTA BUTTON */}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.96 }}
-                onClick={() => navigate("/contact")}
-                className="relative z-10 mt-4 w-full bg-white text-black py-2.5 rounded-lg font-medium text-sm overflow-hidden transition duration-300 hover:bg-yellow-400"
-              >
-                Get Started
-
-                
-              </motion.button>
-
-            </div>
-
-          </motion.div>
-
-        ))}
+        </div>
 
       </div>
 
-    </section>
+    </div>
   );
 }
 
