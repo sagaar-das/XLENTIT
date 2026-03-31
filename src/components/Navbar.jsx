@@ -35,10 +35,10 @@ function Navbar() {
   }, []);
 
   const serviceLinks = [
+    { name: "IT Staffing", id: "it" },
     { name: "Software Development", id: "software" },
     { name: "Application Development", id: "app" },
     { name: "Management Consulting", id: "consulting" },
-    { name: "IT Staffing", id: "it" },
     { name: "BPO / KPO", id: "bpo" },
     { name: "IoT / AI Development", id: "ai" },
   ];
@@ -138,9 +138,9 @@ function Navbar() {
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#d4af37] transition-all group-hover:w-full"></span>
           </NavLink>
 
-          {/* About */}
-          <NavLink to="/about" className={navLinkClass}>
-            About Us
+          {/* Contact Us */}
+          <NavLink to="/contact" className={navLinkClass}>
+            Contact Us
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#d4af37] transition-all group-hover:w-full"></span>
           </NavLink>
 
@@ -218,8 +218,8 @@ function Navbar() {
             Careers
           </NavLink>
 
-          <NavLink to="/about" onClick={() => setMenuOpen(false)} className="block">
-            About Us
+          <NavLink to="/contact" onClick={() => setMenuOpen(false)} className="block">
+            Contact Us
           </NavLink>
 
 

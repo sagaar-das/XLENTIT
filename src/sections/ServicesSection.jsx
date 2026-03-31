@@ -23,10 +23,10 @@ function ServicesSection() {
   const navigate = useNavigate();
 
   const services = [
+    { id: "it", title: "IT Staffing", desc: "We connect businesses with top-tier tech talent, ensuring faster hiring and long-term success.", icon: <Users size={26} />, image: itImg },
     { id: "software", title: "Software Development", desc: "We deliver scalable, secure, and high-performance software solutions tailored to business needs.", icon: <Code size={26} />, image: softwareImg },
     { id: "app", title: "Application Development", desc: "We build user-friendly web and mobile applications designed for performance and seamless experience.", icon: <Smartphone size={26} />, image: appImg },
     { id: "consulting", title: "Management Consulting", desc: "We help businesses optimize operations and drive digital transformation through strategic consulting.", icon: <Briefcase size={26} />, image: consultingImg },
-    { id: "it", title: "IT Staffing", desc: "We connect businesses with top-tier tech talent, ensuring faster hiring and long-term success.", icon: <Users size={26} />, image: itImg },
     { id: "bpo", title: "BPO / KPO", desc: "We provide cost-effective outsourcing solutions to streamline business processes.", icon: <Layers size={26} />, image: bpoImg },
     { id: "ai", title: "IoT / AI Development", desc: "We leverage AI and IoT to build intelligent systems that drive automation and insights.", icon: <Cpu size={26} />, image: aiImg },
   ];

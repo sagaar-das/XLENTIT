@@ -95,7 +95,7 @@ function ContactCTA() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Phone</p>
-                  <p className="text-white">+1 (424) 246-2343</p>
+                  <p className="text-white">+1 (713) 551-4969</p>
                 </div>
               </div>
 

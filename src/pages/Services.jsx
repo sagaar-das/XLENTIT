@@ -83,7 +83,7 @@ function Services() {
       </div>
 
       {/* 🔥 FULL WIDTH CONTENT (EDGE TO EDGE) */}
-      <div className="w-full relative">
+      <div className="w-full bg-black relative">
 
         {/* 🔥 Loader */}
         {loading && (

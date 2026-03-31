@@ -26,10 +26,12 @@ function Footer() {
           <div>
             <h3 className="text-white mb-2">Services</h3>
             <ul className="space-y-1">
-              <li className="hover:text-yellow-400 cursor-pointer">1-on-1 Mentorship</li>
-              <li className="hover:text-yellow-400 cursor-pointer">Mock Interviews</li>
-              <li className="hover:text-yellow-400 cursor-pointer">Resume Building</li>
+              <li className="hover:text-yellow-400 cursor-pointer">Software Development</li>
+              <li className="hover:text-yellow-400 cursor-pointer">Application Development</li>
+              <li className="hover:text-yellow-400 cursor-pointer">Management Consulting</li>
               <li className="hover:text-yellow-400 cursor-pointer">IT Staffing</li>
+              <li className="hover:text-yellow-400 cursor-pointer">BPO / KPO</li>
+              <li className="hover:text-yellow-400 cursor-pointer">IoT / AI Developmen</li>
             </ul>
           </div>
 
@@ -54,7 +56,7 @@ function Footer() {
 
             <div className="flex items-center gap-2">
               <Phone size={16} className="text-yellow-400" />
-              <span>+1 (424) 246-2343</span>
+              <span>+1 (713) 551-4969</span>
             </div>
 
             <div className="flex items-center gap-2">

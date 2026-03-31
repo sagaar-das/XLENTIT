@@ -14,6 +14,8 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Careers from "./pages/Careers";
+import ClientsPage from "./pages/ClientsPage";
+import ContactUs from "./pages/ContactUs"
 
 
 // 🔥 Scroll to top on route change
@@ -63,7 +65,8 @@ function AnimatedRoutes() {
               <Route path="services" element={<Services />} />
               <Route path="services/:serviceId" element={<Services />} />
               <Route path="careers" element={<Careers />} />
-              <Route path="about" element={<About />} />
+              <Route path="contact" element={<ContactUs />} />
+              <Route path="/clients" element={<ClientsPage />} />
 
             </Route>
           </Routes>
