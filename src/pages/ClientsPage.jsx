@@ -1,4 +1,5 @@
 import React from "react";
+const bgImage = new URL("../assets/clients-bg.webp", import.meta.url).href;
 
 function ClientsPage() {
 
@@ -37,7 +38,7 @@ function ClientsPage() {
       <div
         className="h-[300px] md:h-[300px] flex items-center justify-center relative"
         style={{
-          backgroundImage: "url('/src/assets/clients-bg.webp')",
+          backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -59,8 +60,7 @@ function ClientsPage() {
             className="flex items-center justify-center p-4 bg-white rounded-xl border border-yellow-400 "
           >
             <img
-              key={i}
-              src={new URL(`../assets/clientLogo/${logo}`, import.meta.url).href}
+              src={`/clientLogo/${logo}`}
               alt="client logo"
               className="h-10 object-contain"
             />
