@@ -1,35 +1,40 @@
-import React from "react";
-const bgImage = new URL("../assets/clients-bg.webp", import.meta.url).href;
+
+import bgimg from "../assets/clients-bg.webp"
+
+import bain from "../assets/clientLogo/bain-company-logo.svg";
+import paypal from "../assets/clientLogo/paypal-3.svg";
+import mckinsey from "../assets/clientLogo/mckinsey-company.svg";
+import aws from "../assets/clientLogo/amazon-web-services-2.svg";
+import intel from "../assets/clientLogo/intel.svg";
+import startek from "../assets/clientLogo/startek.svg";
+import cgi from "../assets/clientLogo/cgi-logo.svg";
+import teleperformance from "../assets/clientLogo/teleperformance-group.svg";
+import genpact from "../assets/clientLogo/genpact-logo.svg";
+import linkedin from "../assets/clientLogo/linkedin-icon-2.svg";
+import meta from "../assets/clientLogo/meta-3.svg";
+import ibm from "../assets/clientLogo/ibm.svg";
+import globant from "../assets/clientLogo/globant-1.svg";
+import bcg from "../assets/clientLogo/boston-consulting-group.svg";
+import oracle from "../assets/clientLogo/oracle-6.svg";
+import hp from "../assets/clientLogo/hp-hewlett-packard.svg";
+import fujitsu from "../assets/clientLogo/fujitsu-logo.svg";
+import techm from "../assets/clientLogo/tech-mahindra-new-logo.svg";
+import wipro from "../assets/clientLogo/wipro-1.svg";
+import infosys from "../assets/clientLogo/infosys-technologies-logo.svg";
+import tcs from "../assets/clientLogo/tata-consultancy-services-1.svg";
+import deloitte from "../assets/clientLogo/deloitte-1.svg";
+import capgemini from "../assets/clientLogo/capgemini-201x-logo-1.svg";
+import cognizant from "../assets/clientLogo/cognizant-1.svg";
+import accenture from "../assets/clientLogo/accenture-6.svg";
 
 function ClientsPage() {
 
   const logos = [
-    "bain-company-logo.svg",
-    "paypal-3.svg",
-    "mckinsey-company.svg",
-    "amazon-web-services-2.svg",
-    "intel.svg",
-    "startek.svg",
-    "cgi-logo.svg",
-    "teleperformance-group.svg",
-    "genpact-logo.svg",
-    "linkedin-icon-2.svg",
-    "meta-3.svg",
-    "ibm.svg",
-    "globant-1.svg",
-    "boston-consulting-group.svg",
-    "oracle-6.svg",
-    "hp-hewlett-packard.svg",
-    "fujitsu-logo.svg",
-    "tech-mahindra-new-logo.svg",
-    "wipro-1.svg",
-    "infosys-technologies-logo.svg",
-    "tata-consultancy-services-1.svg",
-    "deloitte-1.svg",
-    "capgemini-201x-logo-1.svg",
-    "cognizant-1.svg",
-    "accenture-6.svg",
-  ];
+  bain, paypal, mckinsey, aws, intel, startek, cgi,
+  teleperformance, genpact, linkedin, meta, ibm, globant,
+  bcg, oracle, hp, fujitsu, techm, wipro, infosys,
+  tcs, deloitte, capgemini, cognizant, accenture
+];
 
   return (
     <div className="bg-[#0d0d0f] text-white">
@@ -38,7 +43,7 @@ function ClientsPage() {
       <div
         className="h-[300px] md:h-[300px] flex items-center justify-center relative"
         style={{
-          backgroundImage: `url(${bgImage})`,
+          backgroundImage: `url(${bgimg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -60,7 +65,7 @@ function ClientsPage() {
             className="flex items-center justify-center p-4 bg-white rounded-xl border border-yellow-400 "
           >
             <img
-              src={`/clientLogo/${logo}`}
+              src={logo}
               alt="client logo"
               className="h-10 object-contain"
             />
