@@ -59,9 +59,10 @@ function ClientsPage() {
             className="flex items-center justify-center p-4 bg-white rounded-xl border border-yellow-400 "
           >
             <img
-              src={`/src/assets/clientLogo/${logo}`}
+              key={i}
+              src={new URL(`../assets/clientLogo/${logo}`, import.meta.url).href}
               alt="client logo"
-              className="h-10 object-contain "
+              className="h-10 object-contain"
             />
           </div>
         ))}

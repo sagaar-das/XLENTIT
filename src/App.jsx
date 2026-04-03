@@ -1,3 +1,4 @@
+import { HelmetProvider } from "react-helmet-async";
 import {
   BrowserRouter,
   Routes,
@@ -5,18 +6,45 @@ import {
   useLocation,
 } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
+
+
 
 import Layout from "./components/Layout";
 import WhatsAppButton from "./components/WhatsAppButton";
 
-import Home from "./pages/Home";
-import Services from "./pages/Services";
-import About from "./pages/About";
-import Careers from "./pages/Careers";
-import ClientsPage from "./pages/ClientsPage";
-import ContactUs from "./pages/ContactUs"
+// ✅ Lazy loaded pages (code splitting)
+const Home = lazy(() => import("./pages/Home"));
+const Services = lazy(() => import("./pages/Services"));
+const Careers = lazy(() => import("./pages/Careers"));
+const ClientsPage = lazy(() => import("./pages/ClientsPage"));
+const ContactUs = lazy(() => import("./pages/ContactUs"));
 
+
+const preloadRoutes = {
+  "/": () => import("./pages/Home"),
+  "/services": () => import("./pages/Services"),
+  "/careers": () => import("./pages/Careers"),
+  "/clients": () => import("./pages/ClientsPage"),
+  "/contact": () => import("./pages/ContactUs"),
+};
+
+function PrefetchLinks() {
+  useEffect(() => {
+    const links = document.querySelectorAll("a");
+
+    links.forEach((link) => {
+      link.addEventListener("mouseenter", () => {
+        const href = link.getAttribute("href");
+        if (preloadRoutes[href]) {
+          preloadRoutes[href]();
+        }
+      });
+    });
+  }, []);
+
+  return null;
+}
 
 // 🔥 Scroll to top on route change
 function ScrollToTop() {
@@ -30,6 +58,16 @@ function ScrollToTop() {
 }
 
 
+// 🔥 Loader (premium simple)
+function PageLoader() {
+  return (
+    <div className="h-screen flex items-center justify-center bg-black">
+    
+    </div>
+  );
+}
+
+
 // 🔥 Animated Routes
 function AnimatedRoutes() {
   const location = useLocation();
@@ -40,7 +78,7 @@ function AnimatedRoutes() {
 
       <AnimatePresence mode="wait">
 
-        {/* 🔥 Black overlay (transition screen) */}
+        {/* 🔥 Black overlay transition */}
         <motion.div
           key={location.pathname + "-overlay"}
           initial={{ opacity: 1 }}
@@ -58,18 +96,21 @@ function AnimatedRoutes() {
           exit={{ opacity: 0, filter: "blur(10px)", scale: 0.98 }}
           transition={{ duration: 0.4 }}
         >
-          <Routes location={location}>
-            <Route path="/" element={<Layout />}>
+          {/* ✅ Suspense handles lazy loading */}
+          <Suspense fallback={<PageLoader />}>
+            <Routes location={location}>
+              <Route path="/" element={<Layout />}>
 
-              <Route index element={<Home />} />
-              <Route path="services" element={<Services />} />
-              <Route path="services/:serviceId" element={<Services />} />
-              <Route path="careers" element={<Careers />} />
-              <Route path="contact" element={<ContactUs />} />
-              <Route path="/clients" element={<ClientsPage />} />
+                <Route index element={<Home />} />
+                <Route path="services" element={<Services />} />
+                <Route path="services/:serviceId" element={<Services />} />
+                <Route path="careers" element={<Careers />} />
+                <Route path="contact" element={<ContactUs />} />
+                <Route path="clients" element={<ClientsPage />} />
 
-            </Route>
-          </Routes>
+              </Route>
+            </Routes>
+          </Suspense>
         </motion.div>
 
       </AnimatePresence>
@@ -78,41 +119,22 @@ function AnimatedRoutes() {
 }
 
 
-// 🔥 Prefetch routes (instant feel)
-function PrefetchLinks() {
-  useEffect(() => {
-    const links = document.querySelectorAll("a");
-
-    links.forEach((link) => {
-      link.addEventListener("mouseenter", () => {
-        const href = link.getAttribute("href");
-
-        if (href === "/") import("./pages/Home");
-        if (href === "/services") import("./pages/Services");
-        if (href === "/about") import("./pages/About");
-        if (href === "/careers") import("./pages/Careers");
-      });
-    });
-  }, []);
-
-  return null;
-}
 
 
 function App() {
   return (
-    <BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
 
-      <PrefetchLinks />
+        <PrefetchLinks />
 
-      <AnimatedRoutes />
+        <AnimatedRoutes />
 
-      <WhatsAppButton />
+        <WhatsAppButton />
 
-    </BrowserRouter>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
 export default App;
-
-
