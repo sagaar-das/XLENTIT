@@ -59,7 +59,7 @@ function ClientsPage() {
             <img
               src={`/clientLogo/${logo}`}
               alt="client"
-              className="h-10 object-contain grayscale hover:grayscale-0 transition duration-300"
+              className="h-10 object-contain"
             />
           </div>
         ))}
