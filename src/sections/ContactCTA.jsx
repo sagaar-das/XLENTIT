@@ -35,7 +35,7 @@ function ContactCTA() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // ✅ Phone is optional → validate only if user enters it
+    // Phone is optional -> validate only if user enters it
     if (form.phone && form.phone.length < 10) {
       setError("Please enter a valid phone number.");
       return;

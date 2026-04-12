@@ -36,7 +36,7 @@ function ServicesSection() {
 
       <div className="max-w-7xl mx-auto text-center">
 
-        {/* 🔥 HEADER */}
+        {/* HEADER */}
         <ScrollReveal>
           <p className="text-yellow-400 text-sm tracking-widest mb-3">
             OUR SERVICES
@@ -55,7 +55,7 @@ function ServicesSection() {
           </p>
         </ScrollReveal>
 
-        {/* 🔥 GRID */}
+        {/* GRID */}
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {services.map((service, i) => (
@@ -71,16 +71,16 @@ function ServicesSection() {
               className="group relative overflow-hidden bg-[#111] border border-gray-800 rounded-2xl p-6 text-white cursor-pointer"
             >
 
-              {/* 🔥 IMAGE (OPTIMIZED) */}
+              {/* IMAGE (OPTIMIZED) */}
               <div
                 className="absolute inset-0 bg-cover bg-center transition-opacity duration-500 group-hover:opacity-0"
                 style={{ backgroundImage: `url(${service.image})` }}
               />
 
-              {/* 🔥 OVERLAY */}
+              {/* OVERLAY */}
               <div className="absolute inset-0 bg-black/60 group-hover:bg-black/80 transition duration-300" />
 
-              {/* 🔥 CONTENT */}
+              {/* CONTENT */}
               <div className="relative z-10 flex flex-col justify-end h-full">
 
                 {/* ICON */}

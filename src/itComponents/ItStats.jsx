@@ -1,5 +1,3 @@
-import AnimatedHeading from "../components/AnimatedHeading"
-import AnimatedText from "../components/AnimatedText"
 
 
 function ItStats() {

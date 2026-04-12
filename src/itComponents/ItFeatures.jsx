@@ -9,11 +9,11 @@ function ItFeatures() {
     offset: ["start end", "end start"],
   });
 
-  // ✅ SAFE animations
+  //  SAFE animations
   const scale = useTransform(scrollYProgress, [0, 1], [0.92, 1]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
-  // ✅ LIGHT parallax
+  // LIGHT parallax
   const yLeft = useTransform(scrollYProgress, [0, 1], [40, 0]);
   const yRight = useTransform(scrollYProgress, [0, 1], [40, 0]);
 

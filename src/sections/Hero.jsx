@@ -22,12 +22,12 @@ function Hero() {
 
   const [index, setIndex] = useState(0);
 
-  // 🔥 Scroll animation
+  // Scroll animation
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 80]); // parallax move
   const opacity = useTransform(scrollY, [0, 300], [1, 0.7]);
 
-  // 🔥 Preload images
+  // Preload images
   useEffect(() => {
     slides.forEach((slide) => {
       const img = new Image();
@@ -35,7 +35,7 @@ function Hero() {
     });
   }, []);
 
-  // 🔥 Auto slide
+  // Auto slide
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
@@ -54,7 +54,7 @@ function Hero() {
   return (
     <section className="relative h-[75vh] overflow-hidden">
 
-      {/* 🔥 PARALLAX BACKGROUND */}
+      {/* PARALLAX BACKGROUND */}
       <motion.div
         style={{
           y,
@@ -64,10 +64,10 @@ function Hero() {
         className="absolute inset-0 bg-cover bg-center will-change-transform"
       />
 
-      {/* 🔥 OVERLAY */}
+      {/* OVERLAY */}
       <div className="absolute inset-0 bg-black/60" />
 
-      {/* 🔥 CONTENT */}
+      {/* CONTENT */}
       <div className="relative z-10 h-full flex items-center justify-center px-6 text-center">
 
         <motion.div
@@ -92,7 +92,7 @@ function Hero() {
 
       </div>
 
-      {/* 🔥 LEFT */}
+      {/* LEFT */}
       <button
         onClick={prevSlide}
         className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition"
@@ -100,7 +100,7 @@ function Hero() {
         ‹
       </button>
 
-      {/* 🔥 RIGHT */}
+      {/* RIGHT */}
       <button
         onClick={nextSlide}
         className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition"

@@ -20,7 +20,7 @@ import Layout from "./components/Layout";
 
 
 
-// ✅ Lazy Loaded Main Pages
+// Lazy Loaded Main Pages
 const Home = lazy(() => import("./pages/Home"));
 const Services = lazy(() => import("./pages/Services"));
 const Careers = lazy(() => import("./pages/Careers"));
@@ -34,7 +34,7 @@ const WhatsAppButton = lazy(() =>
 );
 
 
-// ✅ Scroll to Top on Route Change
+// Scroll to Top on Route Change
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -46,7 +46,7 @@ function ScrollToTop() {
 }
 
 
-// ✅ Minimal Fast Loader
+// Minimal Fast Loader
 function PageLoader() {
   return (
     <div className="h-screen bg-[#0d0d0f] flex items-center justify-center">
@@ -56,7 +56,7 @@ function PageLoader() {
 }
 
 
-// ✅ Optimized Route Animations
+// Route Animations
 function AnimatedRoutes() {
   return (
     <>

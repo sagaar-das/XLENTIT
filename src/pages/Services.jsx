@@ -66,7 +66,7 @@ function Services() {
 
       <div className="bg-[#1a1a1a] text-white min-h-screen">
 
-        {/* 🔥 HERO */}
+        {/* HERO */}
         <div className="relative h-[40vh] overflow-hidden">
 
           <motion.div
@@ -94,17 +94,17 @@ function Services() {
 
         </div>
 
-        {/* 🔥 FULL WIDTH CONTENT (EDGE TO EDGE) */}
+        {/* FULL WIDTH CONTENT (EDGE TO EDGE) */}
         <div className="w-full bg-black relative">
 
-          {/* 🔥 Loader */}
+          {/* Loader */}
           {loading && (
             <div className="absolute inset-0 bg-black/80 flex items-center justify-center z-20 backdrop-blur-sm">
               <div className="w-10 h-10 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
             </div>
           )}
 
-          {/* 🔥 Animated Section */}
+          {/* Animated Section */}
           <AnimatePresence mode="wait">
             <motion.div
               key={currentService.id}

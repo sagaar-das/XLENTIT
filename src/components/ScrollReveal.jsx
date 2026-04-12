@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function ScrollReveal({
   children,
   delay = 0,
-  direction = "up", // up | left | right
+  direction = "up", // up/ left/ right
 }) {
   const getInitial = () => {
     switch (direction) {

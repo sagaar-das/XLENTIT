@@ -10,7 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 🔥 Fix phone input dark theme */
+/*  Fix phone input dark theme */
 .PhoneInput {
   background: transparent !important;
   color: white !important;
@@ -32,7 +32,7 @@ html {
   color: white !important;
 }
 
-/* 🔥 Fix Chrome Autofill Background */
+/*  Fix Chrome Autofill Background */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -43,7 +43,7 @@ textarea:-webkit-autofill {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-/* 🔥 Force consistent input styling */
+/* Force consistent input styling */
 input, textarea {
   background-color: #1a1a1a !important;
   color: white !important;

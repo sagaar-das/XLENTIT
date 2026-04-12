@@ -37,13 +37,13 @@ function Industries() {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
 
-      {/* 🔥 Overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/75" />
 
-      {/* 🔥 Content */}
+      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto text-center">
 
-        {/* 🔥 Header */}
+        {/* Header */}
         <ScrollReveal>
           <p className="text-yellow-400 text-sm tracking-widest mb-3">
             INDUSTRIES
@@ -56,7 +56,7 @@ function Industries() {
           </h2>
         </ScrollReveal>
 
-        {/* 🔥 GRID */}
+        {/* GRID */}
         <div className="mt-14 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
 
           {industries.map((item, i) => (

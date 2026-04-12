@@ -48,16 +48,8 @@ function ItHowItWorks() {
   return (
     <section ref={ref} className="relative bg-black py-24 px-4 sm:px-6 overflow-hidden">
 
-      {/* 🔥 ULTRA PREMIUM ANIMATED GRADIENT */}
-      {/* <div className="absolute inset-0 overflow-hidden">
-
-        <div className="absolute w-[600px] h-[600px] bg-yellow-400/30 blur-[140px] top-[-150px] left-[-150px] animate-pulse"></div>
-
-        <div className="absolute w-[500px] h-[500px] bg-yellow-300/20 blur-[120px] bottom-[-150px] right-[-150px] animate-[pulse_6s_infinite]"></div>
-
-        <div className="absolute w-[400px] h-[400px] bg-yellow-500/10 blur-[100px] top-[40%] left-[30%] animate-[pulse_8s_infinite]"></div>
-
-      </div> */}
+      {/*  ULTRA PREMIUM ANIMATED GRADIENT */}
+      
 
       {/* HEADER */}
       <div className="text-center mb-20 relative z-10">

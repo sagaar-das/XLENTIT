@@ -1,4 +1,3 @@
-// FooterBrand.jsx
 import { useEffect, useRef } from "react";
 
 const STAGGER_Y = [-60, -280, -140, -380, -80, -320, -200, -440];

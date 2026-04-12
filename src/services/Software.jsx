@@ -42,10 +42,10 @@ function Software() {
   return (
     <div className="w-full bg-black text-white py-20">
 
-      {/* 🔥 CENTERED CONTENT WRAPPER */}
+      {/* CENTERED CONTENT WRAPPER */}
       <div className="w-full px-4 sm:px-6 lg:px-12">
 
-        {/* 🔥 HEADING SECTION */}
+        {/* HEADING SECTION */}
         <div className="max-w-4xl mx-auto text-center">
 
           <AnimatedHeading
@@ -62,7 +62,7 @@ function Software() {
 
         </div>
 
-        {/* 🔥 CARDS GRID (FULL WIDTH CONTROLLED) */}
+        {/* CARDS GRID  */}
         <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {services.map((item, i) => (
@@ -77,16 +77,16 @@ function Software() {
               className="group relative overflow-hidden rounded-2xl p-[1px] bg-gradient-to-br from-yellow-400/30 via-transparent to-yellow-400/30"
             >
 
-              {/* 🔥 INNER CARD */}
+              {/* INNER CARD */}
               <div className="relative h-full flex flex-col justify-between bg-[#0d0d0f]/90 backdrop-blur-md rounded-2xl p-6 border border-gray-800 transition duration-300 group-hover:border-yellow-400">
 
-                {/* 🔥 GLOW */}
+                {/* GLOW */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none">
                   <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400/10 blur-3xl rounded-full"></div>
                   <div className="absolute bottom-0 right-0 w-40 h-40 bg-yellow-400/10 blur-3xl rounded-full"></div>
                 </div>
 
-                {/* 🔥 CONTENT */}
+                {/* CONTENT */}
                 <div className="relative z-10">
 
                   <h3 className="text-lg font-semibold text-white mb-2 transition duration-300 group-hover:text-yellow-400">

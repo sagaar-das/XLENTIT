@@ -32,18 +32,18 @@ function BPO() {
   return (
     <section className="text-white px-6 py-16 max-w-7xl mx-auto">
 
-      {/* 🔥 Heading (Left → Right Reveal) */}
+      {/* Heading (Left → Right Reveal) */}
       <AnimatedHeading
         text="BPO / KPO"
         className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-4"
       />
 
-      {/* 🔥 Description (Scroll Reveal) */} 
+      {/* Description (Scroll Reveal) */} 
       <AnimatedText className="text-center text-gray-400 mb-10" delay={0.5}>
         We provide cost-effective outsourcing solutions to streamline business processes and enhance productivity.
       </AnimatedText>
 
-      {/* 🔥 Sections */}
+      {/* Sections */}
       <div className="mt-12">
         <ServiceSections data={data} />
       </div>

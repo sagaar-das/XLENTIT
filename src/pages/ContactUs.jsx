@@ -75,10 +75,10 @@ function ContactUs() {
 
             <section className="bg-[#1a1a1a] py-20 px-4 sm:px-6">
 
-                {/* 🔥 GRID */}
+                {/* GRID */}
                 <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
 
-                    {/* 🔥 LEFT SIDE (INFO) */}
+                    {/* LEFT SIDE (INFO) */}
                     <motion.div
                         initial={{ opacity: 0, x: -40 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -140,7 +140,7 @@ function ContactUs() {
 
                             </div>
 
-                            {/* 🔥 BOX */}
+                            {/* BOX */}
                             <div className="mt-8 bg-[#1a1408] border border-yellow-400/20 rounded-xl p-6">
                                 <h3 className="text-white font-semibold mb-2">
                                     Have Questions?
@@ -154,7 +154,7 @@ function ContactUs() {
                             </div>
                         </div>
 
-                        {/* 🔥 SOCIAL */}
+                        {/* SOCIAL */}
                         <div className="mt-8">
                             <h3 className="text-white mb-3">Follow Us</h3>
                             <div className="flex gap-4">
@@ -171,7 +171,7 @@ function ContactUs() {
 
                     </motion.div>
 
-                    {/* 🔥 RIGHT SIDE (FORM) */}
+                    {/* RIGHT SIDE (FORM) */}
                     <motion.div
                         initial={{ opacity: 0, x: 40 }}
                         whileInView={{ opacity: 1, x: 0 }}

@@ -51,7 +51,7 @@ function Navbar() {
     <nav className="sticky top-0 z-50 bg-black/70 backdrop-blur-md border-b border-[#d4af37]/30">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
 
-        {/* 🔹 Logo */}
+        {/* Logo */}
         <div
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => navigate("/")}
@@ -72,7 +72,7 @@ function Navbar() {
           </div>
         </div>
 
-        {/* 🔹 Desktop Menu */}
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-10 font-medium">
 
           {/* Home */}
@@ -132,7 +132,7 @@ function Navbar() {
 
           </div>
 
-          {/* ✅ Careers */}
+          {/*  Careers */}
           <NavLink to="/careers" className={navLinkClass}>
             Careers <span className="text-xs">↓</span>
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#d4af37] transition-all group-hover:w-full"></span>
@@ -147,12 +147,12 @@ function Navbar() {
 
         </div>
 
-        {/* 🔹 CTA */}
+        {/*  CTA */}
         <button className="hidden md:block bg-yellow-400 text-black px-5 py-2 rounded-lg font-semibold hover:bg-[#b8962e] transition">
           Book Free Session
         </button>
 
-        {/* 🔹 Mobile Toggle */}
+        {/*  Mobile Toggle */}
         <div className="md:hidden text-white">
           {menuOpen ? (
             <X onClick={() => setMenuOpen(false)} className="cursor-pointer" />
@@ -162,7 +162,7 @@ function Navbar() {
         </div>
       </div>
 
-      {/* 🔥 Mobile Menu */}
+      {/*  Mobile Menu */}
       {menuOpen && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -176,7 +176,7 @@ function Navbar() {
           {/* Mobile Services */}
           <div className="space-y-2">
 
-            {/* 🔥 Clickable Services Heading */}
+            {/*  Clickable Services Heading */}
             <div
               onClick={() => setOpenServices(prev => !prev)}
               className="text-[#d4af37] cursor-pointer flex justify-between items-center"
@@ -192,7 +192,7 @@ function Navbar() {
               </span>
             </div>
 
-            {/* 🔥 Service List (Toggle) */}
+            {/*  Service List (Toggle) */}
             {openServices && (
               <div className="space-y-2">
                 {serviceLinks.map((item, i) => (
@@ -213,7 +213,7 @@ function Navbar() {
 
           </div>
 
-          {/* ✅ Careers Mobile */}
+          {/* Careers Mobile */}
           <NavLink to="/careers" onClick={() => setMenuOpen(false)} className="block">
             Careers
           </NavLink>

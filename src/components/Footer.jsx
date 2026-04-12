@@ -10,7 +10,7 @@ function Footer() {
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
-        {/* 🔥 LEFT SIDE */}
+        {/*  LEFT SIDE */}
         <div className="text-gray-400 text-sm space-y-6">
 
           {/* LOGO TEXT */}
@@ -88,7 +88,7 @@ function Footer() {
 
         </div>
 
-        {/* 🔥 RIGHT SIDE (ANIMATED BRAND) */}
+        
         <FooterBrand />
 
       </div>

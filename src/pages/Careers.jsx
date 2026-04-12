@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
-// 🔹 Letter animation for heading
+// Letter animation for heading
 const sentence = {
     hidden: { opacity: 1 },
     visible: {
@@ -115,7 +115,7 @@ export default function Careers() {
 
             <div className="min-h-screen bg-[#1a1a1a] text-white px-6 py-16">
 
-                {/* 🔥 Animated Heading */}
+                {/* Animated Heading */}
                 <motion.h1
                     variants={sentence}
                     initial="hidden"
@@ -139,7 +139,7 @@ export default function Careers() {
                     Explore opportunities and grow your career with us.
                 </motion.p>
 
-                {/* 🔥 Filter Buttons with scale */}
+                {/* Filter Buttons with scale */}
                 <div className="flex justify-center gap-4 mb-12">
                     {["All", "IT", "Leadership"].map((item) => (
                         <motion.button
@@ -161,7 +161,7 @@ export default function Careers() {
                     ))}
                 </div>
 
-                {/* 🔥 Cards Grid */}
+                {/* Cards Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredRoles.map((role, index) => (
                         <motion.div

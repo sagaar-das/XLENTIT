@@ -7,16 +7,16 @@ function ClientsPreview() {
     return (
         <section className="relative py-24 px-6 overflow-hidden bg-[#0d0d0f] text-center">
 
-            {/* 🔥 Animated Gradient BG */}
+            {/* Animated Gradient BG */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#0d0d0f] via-[#111111] to-black opacity-90" />
 
-            {/* 🔥 Glow Orbs */}
+            {/* Glow Orbs */}
             <div className="absolute top-10 left-10 w-72 h-72 bg-[#d4af37]/20 blur-[120px] rounded-full animate-pulse" />
             <div className="absolute bottom-10 right-10 w-72 h-72 bg-yellow-500/10 blur-[120px] rounded-full animate-pulse" />
 
             <div className="relative z-10 max-w-5xl mx-auto">
 
-                {/* 🔥 Small Heading */}
+                {/* Small Heading */}
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -26,7 +26,7 @@ function ClientsPreview() {
                     OUR CLIENTS
                 </motion.p>
 
-                {/* 🔥 Heading Animation */}
+                {/* Heading Animation */}
                 <motion.h2
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ function ClientsPreview() {
                     </span>
                 </motion.h2>
 
-                {/* 🔥 Description Animation */}
+                {/* Description Animation */}
                 <motion.p
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ function ClientsPreview() {
                     Our clients trust us to transform complex challenges into actionable insights, delivering reliable analytics, modern solutions, and consistent value that drives business success and long-term partnerships.
                 </motion.p>
 
-                {/* 🔥 Premium Button */}
+                {/* Premium Button */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
