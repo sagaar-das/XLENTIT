@@ -17,6 +17,7 @@ import {
     Users,
     Network,
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 // 🔹 Letter animation for heading
 const sentence = {
@@ -102,93 +103,106 @@ export default function Careers() {
     const headingText = "Careers at XLENT".split("");
 
     return (
-        <div className="min-h-screen bg-[#1a1a1a] text-white px-6 py-16">
 
-            {/* 🔥 Animated Heading */}
-            <motion.h1
-                variants={sentence}
-                initial="hidden"
-                animate="visible"
-                className="text-4xl md:text-6xl font-bold text-center text-yellow-400 mb-6 flex justify-center flex-wrap"
-            >
-                {headingText.map((char, index) => (
-                    <motion.span key={index} variants={letter}>
-                        {char === " " ? "\u00A0" : char}
-                    </motion.span>
-                ))}
-            </motion.h1>
+        <>
+            <Helmet>
+                <title>Careers | Technology Jobs at Xlent IT Services</title>
 
-            {/* Subheading fade */}
-            <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="text-center text-gray-400 mb-10"
-            >
-                Explore opportunities and grow your career with us.
-            </motion.p>
+                <meta name="description" content="Explore exciting careers in IT, software development, staffing, recruiting, and technology services with Xlent IT Services." />
 
-            {/* 🔥 Filter Buttons with scale */}
-            <div className="flex justify-center gap-4 mb-12">
-                {["All", "IT", "Leadership"].map((item) => (
-                    <motion.button
-                        whileTap={{ scale: 0.9 }}
-                        whileHover={{ scale: 1.1 }}
-                        key={item}
-                        onClick={() => setFilter(item)}
-                        className={`px-5 py-2 rounded-full border transition-all duration-300 ${filter === item
+                <link rel="canonical" href="https://www.xlent-itservice.com/careers" />
+            </Helmet>
+
+            <div className="min-h-screen bg-[#1a1a1a] text-white px-6 py-16">
+
+                {/* 🔥 Animated Heading */}
+                <motion.h1
+                    variants={sentence}
+                    initial="hidden"
+                    animate="visible"
+                    className="text-4xl md:text-6xl font-bold text-center text-yellow-400 mb-6 flex justify-center flex-wrap"
+                >
+                    {headingText.map((char, index) => (
+                        <motion.span key={index} variants={letter}>
+                            {char === " " ? "\u00A0" : char}
+                        </motion.span>
+                    ))}
+                </motion.h1>
+
+                {/* Subheading fade */}
+                <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 }}
+                    className="text-center text-gray-400 mb-10"
+                >
+                    Explore opportunities and grow your career with us.
+                </motion.p>
+
+                {/* 🔥 Filter Buttons with scale */}
+                <div className="flex justify-center gap-4 mb-12">
+                    {["All", "IT", "Leadership"].map((item) => (
+                        <motion.button
+                            whileTap={{ scale: 0.9 }}
+                            whileHover={{ scale: 1.1 }}
+                            key={item}
+                            onClick={() => setFilter(item)}
+                            className={`px-5 py-2 rounded-full border transition-all duration-300 ${filter === item
                                 ? "bg-yellow-400 text-black border-yellow-400"
                                 : "border-gray-600 hover:border-yellow-400 hover:text-yellow-400"
-                            }`}
-                    >
-                        {item === "IT"
-                            ? "IT Roles"
-                            : item === "Leadership"
-                                ? "Leadership Roles"
-                                : "All"}
-                    </motion.button>
-                ))}
+                                }`}
+                        >
+                            {item === "IT"
+                                ? "IT Roles"
+                                : item === "Leadership"
+                                    ? "Leadership Roles"
+                                    : "All"}
+                        </motion.button>
+                    ))}
+                </div>
+
+                {/* 🔥 Cards Grid */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {filteredRoles.map((role, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: index * 0.03 }}
+                            whileHover={{ scale: 1.05, rotate: 0.5 }}
+                            className="bg-[#0f0f0f] border border-gray-800 rounded-xl p-6 text-white hover:text-yellow-400 hover:border-yellow-400  hover:shadow-[0_0_25px_rgba(255,215,0,0.4)] transition-all duration-300"
+                        >
+                            <h2 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                                {(() => {
+                                    const Icon = iconMap[role.title];
+                                    return Icon ? <Icon size={18} /> : null;
+                                })()}
+                                {role.title}
+                            </h2>
+
+                            <p className="text-gray-400 mb-4 text-sm leading-relaxed">
+                                {role.description}
+                            </p>
+
+                            <div className="flex flex-wrap gap-2">
+                                {role.skills.map((skill, i) => (
+                                    <motion.span
+                                        whileHover={{ scale: 1.2 }}
+                                        key={i}
+                                        className="text-xs px-3 py-1 bg-gray-800 rounded-full text-gray-300 hover:bg-yellow-400 hover:text-black transition"
+                                    >
+                                        {skill}
+                                    </motion.span>
+                                ))}
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
+        </>
 
-            {/* 🔥 Cards Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredRoles.map((role, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: index * 0.03 }}
-                        whileHover={{ scale: 1.05, rotate: 0.5 }}
-                        className="bg-[#0f0f0f] border border-gray-800 rounded-xl p-6 text-white hover:text-yellow-400 hover:border-yellow-400  hover:shadow-[0_0_25px_rgba(255,215,0,0.4)] transition-all duration-300"
-                    >
-                        <h2 className="text-lg font-semibold mb-2 flex items-center gap-2">
-                            {(() => {
-                                const Icon = iconMap[role.title];
-                                return Icon ? <Icon size={18} /> : null;
-                            })()}
-                            {role.title}
-                        </h2>
 
-                        <p className="text-gray-400 mb-4 text-sm leading-relaxed">
-                            {role.description}
-                        </p>
-
-                        <div className="flex flex-wrap gap-2">
-                            {role.skills.map((skill, i) => (
-                                <motion.span
-                                    whileHover={{ scale: 1.2 }}
-                                    key={i}
-                                    className="text-xs px-3 py-1 bg-gray-800 rounded-full text-gray-300 hover:bg-yellow-400 hover:text-black transition"
-                                >
-                                    {skill}
-                                </motion.span>
-                            ))}
-                        </div>
-                    </motion.div>
-                ))}
-            </div>
-        </div>
     );
 }
 

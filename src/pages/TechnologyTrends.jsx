@@ -162,187 +162,200 @@ function TechnologyTrends() {
     };
 
     return (
-        <section className="min-h-screen bg-[#0d0d0f] text-white px-6 py-16">
-            <div className="max-w-5xl mx-auto">
 
-                {/* Back Button */}
-                <button
-                    onClick={() => navigate(-1)}
-                    className="text-[#d4af37] text-sm mb-8 hover:text-white transition"
-                >
-                    ← Back
-                </button>
+        <>
+            <Helmet>
+                <title>2026 Technology Trends | AI, Robotics & Cybersecurity</title>
 
-                {/* Header */}
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="text-[#d4af37] uppercase tracking-[3px] text-sm font-medium"
-                >
-                    2026 Industry Trends
-                </motion.p>
+                <meta name="description" content="Explore 2026 technology trends including AI, robotics, data centers, cybersecurity, and workforce transformation." />
 
-                <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1, duration: 0.5 }}
-                    className="text-4xl md:text-6xl font-semibold mt-3"
-                >
-                    Technology
-                </motion.h1>
+                <link rel="canonical" href="https://www.xlent-itservice.com/technology-trends" />
+            </Helmet>
 
-                <div className="mt-8 border-t border-gray-800"></div>
 
-                {/* Intro Content */}
-                <motion.div
-                    initial={{ opacity: 0, y: 25 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2, duration: 0.6 }}
-                    className="mt-10 space-y-6 text-gray-400 text-[15px] md:text-base leading-8"
-                >
-                    <p>
-                        The technology industry is entering 2026 with a level of momentum
-                        and pressure that few leaders have experienced before. Advances
-                        across infrastructure, automation, and security are reshaping how
-                        technology organizations operate.
-                    </p>
+            <section className="min-h-screen bg-[#0d0d0f] text-white px-6 py-16">
+                <div className="max-w-5xl mx-auto">
 
-                    <p>
-                        They’re influencing how data centers are designed and powered, how
-                        work gets done, how robotics and physical AI systems operate in
-                        real-world environments, how agentic AI is moving beyond pilot
-                        programs, and how organizations defend themselves against
-                        increasingly sophisticated cyberthreats.
-                    </p>
+                    {/* Back Button */}
+                    <button
+                        onClick={() => navigate(-1)}
+                        className="text-[#d4af37] text-sm mb-8 hover:text-white transition"
+                    >
+                        ← Back
+                    </button>
 
-                    <p>
-                        For technology leaders, the conversation has become how to scale
-                        these technologies responsibly, securely, and sustainably across the
-                        enterprise. Recent industry data underscores how quickly this shift
-                        is happening.
-                    </p>
+                    {/* Header */}
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4 }}
+                        className="text-[#d4af37] uppercase tracking-[3px] text-sm font-medium"
+                    >
+                        2026 Industry Trends
+                    </motion.p>
 
-                    <div className="bg-[#151517] border border-gray-800 rounded-2xl p-6">
-                        <p className="text-white text-lg font-medium">
-                            According to the International Data Corporation (IDC),
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1, duration: 0.5 }}
+                        className="text-4xl md:text-6xl font-semibold mt-3"
+                    >
+                        Technology
+                    </motion.h1>
+
+                    <div className="mt-8 border-t border-gray-800"></div>
+
+                    {/* Intro Content */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 25 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2, duration: 0.6 }}
+                        className="mt-10 space-y-6 text-gray-400 text-[15px] md:text-base leading-8"
+                    >
+                        <p>
+                            The technology industry is entering 2026 with a level of momentum
+                            and pressure that few leaders have experienced before. Advances
+                            across infrastructure, automation, and security are reshaping how
+                            technology organizations operate.
                         </p>
 
-                        <p className="text-[#d4af37] text-3xl md:text-5xl font-bold mt-3">
-                            72%
+                        <p>
+                            They’re influencing how data centers are designed and powered, how
+                            work gets done, how robotics and physical AI systems operate in
+                            real-world environments, how agentic AI is moving beyond pilot
+                            programs, and how organizations defend themselves against
+                            increasingly sophisticated cyberthreats.
                         </p>
 
-                        <p className="text-gray-400 mt-2">
-                            of technology organizations are actively scaling AI initiatives
-                            beyond experimentation and into production environments.
+                        <p>
+                            For technology leaders, the conversation has become how to scale
+                            these technologies responsibly, securely, and sustainably across the
+                            enterprise. Recent industry data underscores how quickly this shift
+                            is happening.
                         </p>
-                    </div>
 
-                    <p>
-                        Leaders are prioritizing the following technology trends, with a
-                        focus on where innovation is moving from theory to execution.
-                    </p>
-                </motion.div>
+                        <div className="bg-[#151517] border border-gray-800 rounded-2xl p-6">
+                            <p className="text-white text-lg font-medium">
+                                According to the International Data Corporation (IDC),
+                            </p>
 
-                {/* Trends Section */}
-                <div className="mt-20">
-                    <h2 className="text-3xl md:text-4xl font-semibold text-white mb-10">
-                        Top Trends In Technology
-                    </h2>
+                            <p className="text-[#d4af37] text-3xl md:text-5xl font-bold mt-3">
+                                72%
+                            </p>
 
-                    <div className="space-y-4">
-                        {trends.map((item, index) => (
-                            <div
-                                key={index}
-                                className="border border-gray-800 rounded-xl bg-[#151517] overflow-hidden"
-                            >
-                                <button
-                                    onClick={() => toggleAccordion(index)}
-                                    className="w-full flex justify-between items-center px-6 py-5 text-left"
+                            <p className="text-gray-400 mt-2">
+                                of technology organizations are actively scaling AI initiatives
+                                beyond experimentation and into production environments.
+                            </p>
+                        </div>
+
+                        <p>
+                            Leaders are prioritizing the following technology trends, with a
+                            focus on where innovation is moving from theory to execution.
+                        </p>
+                    </motion.div>
+
+                    {/* Trends Section */}
+                    <div className="mt-20">
+                        <h2 className="text-3xl md:text-4xl font-semibold text-white mb-10">
+                            Top Trends In Technology
+                        </h2>
+
+                        <div className="space-y-4">
+                            {trends.map((item, index) => (
+                                <div
+                                    key={index}
+                                    className="border border-gray-800 rounded-xl bg-[#151517] overflow-hidden"
                                 >
-                                    <span className="text-white text-lg font-medium">
-                                        {item.title}
-                                    </span>
+                                    <button
+                                        onClick={() => toggleAccordion(index)}
+                                        className="w-full flex justify-between items-center px-6 py-5 text-left"
+                                    >
+                                        <span className="text-white text-lg font-medium">
+                                            {item.title}
+                                        </span>
 
-                                    {openIndex === index ? (
-                                        <Minus className="text-[#d4af37]" size={22} />
-                                    ) : (
-                                        <Plus className="text-[#d4af37]" size={22} />
-                                    )}
-                                </button>
+                                        {openIndex === index ? (
+                                            <Minus className="text-[#d4af37]" size={22} />
+                                        ) : (
+                                            <Plus className="text-[#d4af37]" size={22} />
+                                        )}
+                                    </button>
 
-                                <AnimatePresence>
-                                    {openIndex === index && (
-                                        <motion.div
-                                            initial={{ height: 0, opacity: 0 }}
-                                            animate={{ height: "auto", opacity: 1 }}
-                                            exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.3 }}
-                                            className="overflow-hidden"
-                                        >
+                                    <AnimatePresence>
+                                        {openIndex === index && (
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: "auto", opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.3 }}
+                                                className="overflow-hidden"
+                                            >
 
                                         //data of each heading
-                                            <div className="px-6 pb-6 border-t border-gray-800">
-                                                <div className="pt-6 space-y-5">
+                                                <div className="px-6 pb-6 border-t border-gray-800">
+                                                    <div className="pt-6 space-y-5">
 
-                                                    {item.content.map((block, i) => {
+                                                        {item.content.map((block, i) => {
 
-                                                        if (block.type === "highlight") {
-                                                            return (
-                                                                <h3
-                                                                    key={i}
-                                                                    className="text-xl md:text-2xl font-semibold text-white leading-relaxed"
-                                                                >
-                                                                    {block.text}
-                                                                </h3>
-                                                            );
-                                                        }
-
-                                                        if (block.type === "bullet") {
-                                                            return (
-                                                                <div key={i} className="flex gap-3">
-                                                                    <div className="w-2 h-2 rounded-full bg-[#d4af37] mt-3"></div>
-                                                                    <p className="text-gray-400 leading-8">{block.text}</p>
-                                                                </div>
-                                                            );
-                                                        }
-
-                                                        if (block.type === "stat") {
-                                                            return (
-                                                                <div
-                                                                    key={i}
-                                                                    className="bg-[#111] border border-gray-800 rounded-xl p-5"
-                                                                >
-                                                                    <p className="text-[#d4af37] text-4xl font-bold">
-                                                                        {block.number}
-                                                                    </p>
-                                                                    <p className="text-gray-400 mt-2 leading-7">
+                                                            if (block.type === "highlight") {
+                                                                return (
+                                                                    <h3
+                                                                        key={i}
+                                                                        className="text-xl md:text-2xl font-semibold text-white leading-relaxed"
+                                                                    >
                                                                         {block.text}
-                                                                    </p>
-                                                                </div>
+                                                                    </h3>
+                                                                );
+                                                            }
+
+                                                            if (block.type === "bullet") {
+                                                                return (
+                                                                    <div key={i} className="flex gap-3">
+                                                                        <div className="w-2 h-2 rounded-full bg-[#d4af37] mt-3"></div>
+                                                                        <p className="text-gray-400 leading-8">{block.text}</p>
+                                                                    </div>
+                                                                );
+                                                            }
+
+                                                            if (block.type === "stat") {
+                                                                return (
+                                                                    <div
+                                                                        key={i}
+                                                                        className="bg-[#111] border border-gray-800 rounded-xl p-5"
+                                                                    >
+                                                                        <p className="text-[#d4af37] text-4xl font-bold">
+                                                                            {block.number}
+                                                                        </p>
+                                                                        <p className="text-gray-400 mt-2 leading-7">
+                                                                            {block.text}
+                                                                        </p>
+                                                                    </div>
+                                                                );
+                                                            }
+
+                                                            return (
+                                                                <p key={i} className="text-gray-400 leading-8">
+                                                                    {block.text}
+                                                                </p>
                                                             );
-                                                        }
+                                                        })}
 
-                                                        return (
-                                                            <p key={i} className="text-gray-400 leading-8">
-                                                                {block.text}
-                                                            </p>
-                                                        );
-                                                    })}
-
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </div>
-                        ))}
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
 
-            </div>
-        </section>
+                </div>
+            </section>
+        </>
+
     );
 }
 
