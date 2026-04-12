@@ -1,4 +1,5 @@
 import bgimg from "../assets/clients-bg.webp";
+import { useNavigate } from "react-router-dom";
 
 function ClientsPage() {
   const logos = [
@@ -29,6 +30,8 @@ function ClientsPage() {
     "accenture-6.svg",
   ];
 
+  const navigate = useNavigate();
+
   return (
     <div className="bg-[#0d0d0f] text-white">
 
@@ -47,6 +50,17 @@ function ClientsPage() {
           OUR CLIENTS
         </h1>
       </div>
+
+
+      <div className="max-w-7xl mx-auto px-6 pt-8">
+        <button type="button" onClick={() => navigate(-1)}
+          className="text-yellow-400 text-sm hover:underline hover:text-white transition" >
+          ← Back
+        </button>
+      </div>
+
+
+
 
       {/* LOGOS */}
       <div className="max-w-7xl mx-auto py-16 px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 items-center">

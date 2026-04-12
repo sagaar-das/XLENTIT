@@ -180,7 +180,7 @@ function TechnologyTrends() {
                     {/* Back Button */}
                     <button
                         onClick={() => navigate(-1)}
-                        className="text-[#d4af37] text-sm mb-8 hover:text-white transition"
+                        className="text-[#d4af37] text-sm mb-8 hover:text-white transition hover:underline "
                     >
                         ← Back
                     </button>

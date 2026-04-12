@@ -18,7 +18,12 @@ function PrivacyPolicy() {
             <div className="bg-[#111] text-white min-h-screen px-6 py-16">
                 <div className="max-w-4xl mx-auto">
 
-
+                    <button
+                        onClick={() => navigate(-1)}
+                        className="mb-6 text-yellow-400 text-sm hover:underline hover:text-white transition"
+                    >
+                        ← Back to Contact Us
+                    </button>
 
 
                     <h1 className="text-3xl text-yellow-400 font-bold mb-6">Privacy Policy</h1>
@@ -160,12 +165,7 @@ function PrivacyPolicy() {
                         We are committed to protecting your privacy and ensuring your data is handled securely.
                     </p>
 
-                    <button
-                        onClick={() => navigate("/")}
-                        className="mb-6 text-yellow-400 text-sm hover:underline"
-                    >
-                        ← Back to Home
-                    </button>
+                    
 
                 </div>
             </div>
