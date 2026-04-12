@@ -1,4 +1,6 @@
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+
 
 function PrivacyPolicy() {
     const navigate = useNavigate();

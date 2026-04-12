@@ -3,16 +3,20 @@ import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import { useNavigate } from "react-router-dom";
+
 
 import {
   Mail,
   Phone,
   MapPin,
-  Clock
+  Clock,
+  Link
 } from "lucide-react";
 
 function ContactCTA() {
 
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -54,9 +58,9 @@ function ContactCTA() {
   };
 
   return (
-    <section 
-    id="contact"
-    className="bg-[#1a1a1a] py-20 px-4 sm:px-6">
+    <section
+      id="contact"
+      className="bg-[#1a1a1a] py-20 px-4 sm:px-6">
 
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
 
@@ -219,28 +223,36 @@ function ContactCTA() {
                   onChange={() => setAccepted(!accepted)}
                   className="mt-1 accent-yellow-400"
                 />
-                <p>
-                  By opting in for text messages, you agree to receive an appointment reminders and important updates from brightitinc at the number provided. Message frequency varies. Msg & data rates may apply. Reply STOP to unsubscribe. Reply HELP for help.
-                  View our{" "}
 
-                  <a
-                    href="/privacy-policy"
-                    className="text-yellow-400 cursor-pointer"
+               
+                <p className="leading-5">
+                  By opting in for text messages, you agree to receive appointment
+                  reminders and important updates from brightitinc at the number
+                  provided. Message frequency varies. Msg & data rates may apply.
+                  Reply STOP to unsubscribe. Reply HELP for help. View our{" "}
+
+                  <span
+                    onClick={() => navigate("/privacy-policy")}
+                    className="text-yellow-400 cursor-pointer hover:text-yellow-300"
                   >
                     Privacy Policy
-                  </a>
+                  </span>
 
                   {" "}and{" "}
 
-                  <a
-                    href="/terms-conditions"
-                    className="text-yellow-400 cursor-pointer"
+                  <span
+                    onClick={() => navigate("/terms-conditions")}
+                    className="text-yellow-400 cursor-pointer hover:text-yellow-300"
                   >
                     Terms & Conditions
-                  </a>
+                  </span>
 
                   {" "}for more information.
                 </p>
+                
+
+
+
               </div>
 
               {error && <p className="text-red-400 text-xs">{error}</p>}

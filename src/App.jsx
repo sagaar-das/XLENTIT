@@ -16,9 +16,8 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 
 import Layout from "./components/Layout";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsConditions from "./pages/TermsConditions";
-import TechnologyTrends from "./pages/TechnologyTrends";
+
+
 
 
 // ✅ Lazy Loaded Main Pages
@@ -27,6 +26,9 @@ const Services = lazy(() => import("./pages/Services"));
 const Careers = lazy(() => import("./pages/Careers"));
 const ClientsPage = lazy(() => import("./pages/ClientsPage"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
+const TermsConditions = lazy(() => import("./pages/TermsConditions"));
+const TechnologyTrends = lazy(() => import("./pages/TechnologyTrends"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const WhatsAppButton = lazy(() =>
   import("./components/WhatsAppButton")
 );
@@ -56,76 +58,29 @@ function PageLoader() {
 
 // ✅ Optimized Route Animations
 function AnimatedRoutes() {
-  const location = useLocation();
-
   return (
     <>
       <ScrollToTop />
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={location.pathname}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -12 }}
-          transition={{ duration: 0.22, ease: "easeOut" }}
-        >
-          <Suspense fallback={<PageLoader />}>
-            <Routes location={location}>
-
-              <Route path="/" element={<Layout />}>
-
-                <Route index element={<Home />} />
-
-                <Route
-                  path="services"
-                  element={<Services />}
-                />
-
-                <Route
-                  path="services/:serviceId"
-                  element={<Services />}
-                />
-
-                <Route
-                  path="careers"
-                  element={<Careers />}
-                />
-
-                <Route
-                  path="clients"
-                  element={<ClientsPage />}
-                />
-
-                <Route
-                  path="contact"
-                  element={<ContactUs />}
-                />
-
-                <Route
-                  path="privacy-policy"
-                  element={<PrivacyPolicy />}
-                />
-
-                <Route
-                  path="terms-conditions"
-                  element={<TermsConditions />}
-                />
-
-                <Route
-                  path="technology-trends"
-                  element={<TechnologyTrends />}
-                />
-
-              </Route>
-
-            </Routes>
-          </Suspense>
-        </motion.div>
-      </AnimatePresence>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="services" element={<Services />} />
+            <Route path="services/:serviceId" element={<Services />} />
+            <Route path="careers" element={<Careers />} />
+            <Route path="clients" element={<ClientsPage />} />
+            <Route path="contact" element={<ContactUs />} />
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="terms-conditions" element={<TermsConditions />} />
+            <Route path="technology-trends" element={<TechnologyTrends />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </>
   );
 }
+
 
 
 function App() {
