@@ -31,12 +31,8 @@ function ContactCTA() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!accepted) {
-      setError("Please accept Terms & Conditions.");
-      return;
-    }
-
-    if (!form.phone || form.phone.length < 10) {
+    // ✅ Phone is optional → validate only if user enters it
+    if (form.phone && form.phone.length < 10) {
       setError("Please enter a valid phone number.");
       return;
     }
@@ -58,12 +54,13 @@ function ContactCTA() {
   };
 
   return (
-    <section className="bg-[#1a1a1a] py-20 px-4 sm:px-6">
+    <section 
+    id="contact"
+    className="bg-[#1a1a1a] py-20 px-4 sm:px-6">
 
-      {/* 🔥 GRID */}
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
 
-        {/* 🔥 LEFT SIDE (INFO) */}
+        {/* LEFT SIDE */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -125,7 +122,6 @@ function ContactCTA() {
 
             </div>
 
-            {/* 🔥 BOX */}
             <div className="mt-8 bg-[#1a1408] border border-yellow-400/20 rounded-xl p-6">
               <h3 className="text-white font-semibold mb-2">
                 Have Questions?
@@ -139,7 +135,6 @@ function ContactCTA() {
             </div>
           </div>
 
-          {/* 🔥 SOCIAL */}
           <div className="mt-8">
             <h3 className="text-white mb-3">Follow Us</h3>
             <div className="flex gap-4">
@@ -156,7 +151,7 @@ function ContactCTA() {
 
         </motion.div>
 
-        {/* 🔥 RIGHT SIDE (FORM) */}
+        {/* RIGHT SIDE */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -198,7 +193,6 @@ function ContactCTA() {
               />
 
               <div className="bg-[#1a1a1a] rounded-md px-3 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
-
                 <PhoneInput
                   international
                   defaultCountry="US"
@@ -207,7 +201,6 @@ function ContactCTA() {
                   placeholder="Phone number"
                   className="text-sm bg-transparent text-white w-full"
                 />
-
               </div>
 
               <input
@@ -227,10 +220,26 @@ function ContactCTA() {
                   className="mt-1 accent-yellow-400"
                 />
                 <p>
-                  I agree to the{" "}
-                  <span className="text-yellow-400 cursor-pointer">
+                  By opting in for text messages, you agree to receive an appointment reminders and important updates from brightitinc at the number provided. Message frequency varies. Msg & data rates may apply. Reply STOP to unsubscribe. Reply HELP for help.
+                  View our{" "}
+
+                  <a
+                    href="/privacy-policy"
+                    className="text-yellow-400 cursor-pointer"
+                  >
+                    Privacy Policy
+                  </a>
+
+                  {" "}and{" "}
+
+                  <a
+                    href="/terms-conditions"
+                    className="text-yellow-400 cursor-pointer"
+                  >
                     Terms & Conditions
-                  </span>
+                  </a>
+
+                  {" "}for more information.
                 </p>
               </div>
 
@@ -257,3 +266,4 @@ function ContactCTA() {
 }
 
 export default ContactCTA;
+

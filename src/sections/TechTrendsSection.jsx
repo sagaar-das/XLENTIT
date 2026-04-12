@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function TechTrendsSection() {
+  const navigate = useNavigate();
+
   const leftItems = [
     "Data Centers Becoming Strategic Infrastructure",
     "Robotic Shifts",
@@ -15,14 +18,14 @@ function TechTrendsSection() {
   return (
     <section className="relative bg-[#0d0d0f] py-16 px-6 overflow-hidden">
 
-      {/* 🔥 SMALL BACKGROUND YEAR */}
+      {/* SMALL BACKGROUND YEAR */}
       <div className="absolute right-6 bottom-0 text-[90px] md:text-[140px] font-bold text-white/5 select-none">
         2026
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
 
-        {/* 🔥 HEADING */}
+        {/* HEADING */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,10 +35,21 @@ function TechTrendsSection() {
           What’s Shaping Technology This Year
         </motion.h2>
 
-        {/* 🔥 DIVIDER */}
+        {/* NEW LINK */}
+        <motion.button
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          onClick={() => navigate("/technology-trends")}
+          className="mt-4 text-[#d4af37] text-sm md:text-base font-medium hover:text-white transition"
+        >
+          Explore 2026 Trends →
+        </motion.button>
+
+        {/* DIVIDER */}
         <div className="mt-6 border-t border-gray-800"></div>
 
-        {/* 🔥 GRID */}
+        {/* GRID */}
         <div className="mt-6 grid md:grid-cols-2 gap-8">
 
           {/* LEFT */}

@@ -20,9 +20,6 @@ function Home() {
       <Industries />
       <TechTrendsSection />
       <ClientsPreview />
-      {/* <AboutCompany />
-      <WhyChoose />
-      <Career /> */}
       <ContactCTA />
     </>
   );
