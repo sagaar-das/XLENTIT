@@ -22,7 +22,7 @@ function AnimatedHeading({ text, className = "" }) {
       variants={sentence}
       initial="hidden"
       animate="visible"
-      className={`flex flex-wrap justify-center ${className}`}
+      className={`flex flex-wrap justify-center  ${className}`}
     >
       {chars.map((char, index) => (
         <motion.span key={index} variants={letter}>

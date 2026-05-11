@@ -36,7 +36,7 @@ function Consulting() {
       {/* Heading (Left → Right Reveal) */}
       <AnimatedHeading
         text="Management Consulting"
-        className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-4"
+        className="text-[26px] sm:text-5xl font-bold text-yellow-400 mb-4 whitespace-nowrap"
       />
 
       {/* Description (Scroll Reveal) */} 

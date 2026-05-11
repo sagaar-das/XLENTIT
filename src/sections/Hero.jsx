@@ -39,7 +39,7 @@ function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
@@ -52,7 +52,7 @@ function Hero() {
   };
 
   return (
-    <section className="relative h-[75vh] overflow-hidden">
+    <section className="relative h-[30vh] sm:h-[75vh] overflow-hidden">
 
       {/* PARALLAX BACKGROUND */}
       <motion.div
@@ -61,7 +61,7 @@ function Hero() {
           opacity,
           backgroundImage: `url(${slides[index].image})`,
         }}
-        className="absolute inset-0 bg-cover bg-center will-change-transform"
+        className="absolute inset-0 bg-cover bg-center will-change-transform transition-all duration-700"
       />
 
       {/* OVERLAY */}
@@ -80,11 +80,11 @@ function Hero() {
           {/* TITLE */}
           <AnimatedHeading
             text={slides[index].title}
-            className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-5"
+            className="text-[20px] sm:text-5xl font-bold text-yellow-400 mb-5 whitespace-nowrap"
           />
 
           {/* DESC */}
-          <p className="text-gray-300 text-sm sm:text-base max-w-xl mx-auto">
+          <p className="text-gray-300 text-[13px] sm:text-base max-w-xl mx-auto">
             {slides[index].desc}
           </p>
 

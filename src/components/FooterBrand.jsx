@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 const STAGGER_Y = [-60, -280, -140, -380, -80, -320, -200, -440];
-const SPEEDS    = [0.9,  1.4,  0.7,  1.6,  1.1,  0.8,  1.3,  1.0];
+const SPEEDS = [0.9, 1.4, 0.7, 1.6, 1.1, 0.8, 1.3, 1.0];
 
 export default function FooterBrand() {
   const rootRef = useRef(null);
@@ -18,7 +18,7 @@ export default function FooterBrand() {
 
     const animate = () => {
       state.current.forEach((s, i) => {
-        s.currentX += (s.targetX - s.currentX) * 0.07;
+        s.currentX += (s.targetX - s.currentX) * 0.03;
         if (trackRefs.current[i])
           trackRefs.current[i].style.transform =
             `translateY(${s.baseY}px) translateX(${s.currentX}px)`;
@@ -40,17 +40,41 @@ export default function FooterBrand() {
       state.current.forEach(s => { s.targetX = 0; });
     };
 
+    let scrollTimeout;
+
+    const onScroll = () => {
+      const maxScroll =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+      const norm = (window.scrollY / maxScroll) * 2 - 1;
+
+      state.current.forEach((s, i) => {
+        const dir = i % 2 === 0 ? 1 : -1;
+
+        s.targetX = norm * 80 * dir;
+      });
+
+      clearTimeout(scrollTimeout);
+
+      scrollTimeout = setTimeout(() => {
+        state.current.forEach((s) => {
+          s.targetX = 0;
+        });
+      }, 150);
+    };
+
     el.addEventListener("mousemove", onMove);
     el.addEventListener("mouseleave", onLeave);
+    window.addEventListener("scroll", onScroll);
     return () => {
       el.removeEventListener("mousemove", onMove);
       el.removeEventListener("mouseleave", onLeave);
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
 
   const wordStyle = {
     fontFamily: "'Bebas Neue', sans-serif",
-    fontSize: "90px",
     color: "#fff",
     lineHeight: 1,
     userSelect: "none",
@@ -65,7 +89,7 @@ export default function FooterBrand() {
 
   return (
     <div ref={rootRef}
-      className="bg-black overflow-hidden rounded-xl w-full h-[500px] flex flex-row">
+      className="bg-black overflow-hidden rounded-xl w-full h-[340px] sm:h-[500px] flex flex-row">
       {STAGGER_Y.map((_, i) => (
         <div key={i} className="flex-1 overflow-hidden relative flex justify-center">
           <div
@@ -73,8 +97,11 @@ export default function FooterBrand() {
             className="flex flex-col items-center absolute"
             style={{ willChange: "transform" }}
           >
-            {Array(4).fill("XlENTIT").map((w, j) => (
-              <span key={j} style={wordStyle}>{w}</span>
+            {Array(4).fill("XLENTIT").map((w, j) => (
+              <span key={j}
+                style={wordStyle}
+                className="text-[48px] sm:text-[80px]"
+              >{w}</span>
             ))}
           </div>
         </div>

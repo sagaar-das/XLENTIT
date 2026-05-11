@@ -49,7 +49,7 @@ function ItWhyChooseUs() {
           WHY XLENT IT
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-400">
+        <h2 className="text-[20px] sm:text-5xl font-bold text-yellow-400 mb-5 whitespace-nowrap">
           Why Students Choose Us
         </h2>
 

@@ -1,14 +1,28 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
 import FooterBrand from "./FooterBrand";
+import logo from "../assets/logo.png";
 
 
 
 function Footer() {
   return (
-    <footer className="bg-black border-t border-[#d4af37]/20 py-16 px-6">
+    <footer className="relative bg-black border-t border-[#d4af37]/20 py-16 px-6 overflow-hidden">
+      
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+         {/* BACKGROUND LOGO
+      <div
+        className="absolute inset-0 flex items-center justify-left pointer-events-none opacity-25"
+      >
+        <img
+          src={logo}
+          alt="logo"
+          className="w-[250px] sm:w-[400px] md:w-[500px] object-contain"
+        />
+      </div> */}
+       
 
         {/*  LEFT SIDE */}
         <div className="text-gray-400 text-sm space-y-6">
@@ -88,7 +102,7 @@ function Footer() {
 
         </div>
 
-        
+
         <FooterBrand />
 
       </div>

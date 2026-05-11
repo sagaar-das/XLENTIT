@@ -293,7 +293,7 @@ function TechnologyTrends() {
                                                 className="overflow-hidden"
                                             >
 
-                                        //data of each heading
+                                        {/* data of each heading */}
                                                 <div className="px-6 pb-6 border-t border-gray-800">
                                                     <div className="pt-6 space-y-5">
 

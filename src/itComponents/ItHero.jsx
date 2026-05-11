@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import env from '../assets/env.jpg'
+import env from '../assets/staffing.webp'
 import AnimatedHeading from "../components/AnimatedHeading";
 
 function ItHero() {
@@ -32,12 +32,15 @@ function ItHero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-400 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-400 leading-tight "
           >
-            <AnimatedHeading
-            text="IT Staffing Service     "
-            />
-            
+            <div className="w-full">
+             
+            IT Staffing Service
+              
+            </div>
+
+
           </motion.h1>
 
           {/* Paragraph */}
@@ -55,16 +58,16 @@ function ItHero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="mt-5 flex flex-wrap gap-4 text-sm"
+            className="mt-5 flex flex-wrap justify-center sm:justify-start gap-3 text-sm"
           >
-            <span className="border border-yellow-400 text-gray-400 px-4 py-2 rounded-full"><span className="text-tealDark">✓</span> 100% Job Placement Support</span>
-            <span className="border border-yellow-400 text-gray-400 px-4 py-2 rounded-full"><span className="text-tealDark">✓</span> 1-on-1 Dedicated Mentorship</span>
-            <span className="border border-yellow-400 text-gray-400 px-4 py-2 rounded-full"><span className="text-tealDark">✓</span> Real Interview Preparation</span>
-            <span className="border border-yellow-400 text-gray-400 px-4 py-2 rounded-full"><span className="text-tealDark">✓</span> ATS-Optimized Resumes</span>
+            <span className="border border-yellow-400 text-gray-400 px-3 py-1.5 rounded-full"><span className="text-tealDark">✓</span> 100% Job Placement Support</span>
+            <span className="border border-yellow-400 text-gray-400 px-3 py-1.5 rounded-full"><span className="text-tealDark">✓</span> 1-on-1 Dedicated Mentorship</span>
+            <span className="border border-yellow-400 text-gray-400 px-3 py-1.5 rounded-full"><span className="text-tealDark">✓</span> Real Interview Preparation</span>
+            <span className="border border-yellow-400 text-gray-400 px-3 py-1.5 rounded-full"><span className="text-tealDark">✓</span> ATS-Optimized Resumes</span>
           </motion.div>
 
-          
-          
+
+
 
         </motion.div>
 

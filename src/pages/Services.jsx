@@ -67,7 +67,7 @@ function Services() {
       <div className="bg-[#1a1a1a] text-white min-h-screen">
 
         {/* HERO */}
-        <div className="relative h-[40vh] overflow-hidden">
+        <div className="relative h-[20vh] md:h-[40vh] overflow-hidden">
 
           <motion.div
             key={currentService.id}
@@ -80,17 +80,7 @@ function Services() {
 
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black" />
 
-          <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
-            <motion.h1
-              key={currentService.title}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-3xl sm:text-5xl font-bold text-white"
-            >
-              {currentService.title} Service
-            </motion.h1>
-          </div>
+          
 
         </div>
 

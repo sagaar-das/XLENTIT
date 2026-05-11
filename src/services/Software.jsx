@@ -50,7 +50,7 @@ function Software() {
 
           <AnimatedHeading
             text="Software Development"
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-400 mb-4"
+            className="text-[26px] sm:text-5xl font-bold text-yellow-400 mb-4 whitespace-nowrap"
           />
 
           <AnimatedText
