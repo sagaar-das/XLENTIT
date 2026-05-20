@@ -6,6 +6,7 @@ import ContactCTA from "../sections/ContactCTA";
 import ClientsPreview from "../sections/ClientsPreview";
 import TechTrendsSection from "../sections/TechTrendsSection";
 import { Helmet } from "react-helmet-async";
+import WhyUs from "../sections/WhyUs";
 
 function Home() {
   return (
@@ -52,6 +53,7 @@ function Home() {
       <Hero />
       <ServicesSection />
       <Industries />
+      <WhyUs />
       <TechTrendsSection />
       <ClientsPreview />
       <ContactCTA />

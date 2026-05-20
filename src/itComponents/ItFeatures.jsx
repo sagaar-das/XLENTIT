@@ -61,7 +61,7 @@ function ItFeatures() {
         >
           <div>
             <h2 className="text-3xl font-bold text-yellow-400">
-              Personally mentoring India's next Xlent engineers
+              Personally mentoring World's next Xlent engineers
             </h2>
 
             <p className="mt-2 text-gray-400">

@@ -11,7 +11,10 @@ import {
   Phone,
   MapPin,
   Clock,
-  Link
+  Link,
+  Linkedin,
+  Facebook,
+  Instagram
 } from "lucide-react";
 
 function ContactCTA() {
@@ -107,7 +110,7 @@ function ContactCTA() {
                 <div>
                   <p className="text-gray-400 text-sm">Office</p>
                   <p className="text-white text-sm">
-                    823 Congress Ave. STE 300, Austin, TX 78701
+                    1209 MOUNTAIN RD PL NE STE HALBUQUERQUE, NM 87110
                   </p>
                 </div>
               </div>
@@ -141,16 +144,34 @@ function ContactCTA() {
 
           <div className="mt-8">
             <h3 className="text-white mb-3">Follow Us</h3>
-            <div className="flex gap-4">
-              {["LinkedIn", "Twitter", "Instagram"].map((item, i) => (
-                <button
-                  key={i}
-                  className="px-4 py-2 border border-gray-700 rounded-md text-sm text-gray-300 hover:border-yellow-400 hover:text-yellow-400 transition"
-                >
-                  {item}
-                </button>
-              ))}
-            </div>
+            <div className="flex gap-4 pt-2">
+            <a
+              href="https://www.linkedin.com/company/xlent-itservice/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 flex items-center justify-center border border-gray-700 rounded-md text-gray-300 hover:text-yellow-400 hover:border-yellow-400 transition"
+            >
+              <Linkedin size={18} />
+            </a>
+
+            <a
+              // href="https://facebook.com/yourprofile"
+              // target="_blank"
+              // rel="noopener noreferrer"
+              className="w-9 h-9 flex items-center justify-center border border-gray-700 rounded-md text-gray-300 hover:text-yellow-400 hover:border-yellow-400 transition"
+            >
+              <Facebook size={18} />
+            </a>
+
+            <a
+              // href="https://instagram.com/yourprofile"
+              // target="_blank"
+              // rel="noopener noreferrer"
+              className="w-9 h-9 flex items-center justify-center border border-gray-700 rounded-md text-gray-300 hover:text-yellow-400 hover:border-yellow-400 transition"
+            >
+              <Instagram size={18} />
+            </a>
+          </div>
           </div>
 
         </motion.div>

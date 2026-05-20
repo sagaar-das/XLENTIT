@@ -22,7 +22,7 @@ function PrivacyPolicy() {
                         onClick={() => navigate(-1)}
                         className="mb-6 text-yellow-400 text-sm hover:underline hover:text-white transition"
                     >
-                        ← Back to Contact Us
+                        ← Back
                     </button>
 
 
