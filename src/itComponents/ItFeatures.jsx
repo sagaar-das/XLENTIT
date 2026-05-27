@@ -37,12 +37,26 @@ function ItFeatures() {
 
           <div className="flex flex-wrap gap-2 mt-4">
             {[
-              "Full Stack Development",
-              "Real-World Projects",
-              "Open Source Contributions",
-              "Production Ready",
-              "DevOps & Deployment",
-              "Job Ready Portfolio",
+              "Software Development Engineer (SDE)",
+              "Full Stack Developer",
+              "Frontend Developer",
+              "Backend Developer",
+              "Python Developer",
+              "Data Scientist",
+              "Data Engineer",
+              "Cloud Engineer",
+              "Financial Analyst",
+              "Data Analyst",
+              "DevOps Engineer",
+              "QA / Test Engineer",
+              "AI/ML Lead",
+              "Data Architect",
+              "Product Manager",
+              "Engineering Manager",
+              "Technical Architect",
+              "Cybersecurity Analyst",
+              "UI/UX Designer",
+              "Validation Engineer",
             ].map((tag, i) => (
               <span
                 key={i}
@@ -65,7 +79,7 @@ function ItFeatures() {
             </h2>
 
             <p className="mt-2 text-gray-400">
-              Taking you from 1x to 100x through real-world projects.
+              At Xlent Staffing, we don’t just help engineers find jobs — we help them become industry-ready professionals. Through hands-on mentorship, real-world projects, and practical learning, we guide aspiring developers from beginner to expert-level growth. Our mission is to transform talent into high-performing engineers by focusing on problem-solving, modern technologies, and real business challenges. Whether you're starting your journey or scaling your career, Xlent empowers you to grow from 1x to 100x with confidence, skills, and industry experience.
             </p>
           </div>
         </motion.div>

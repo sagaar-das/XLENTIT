@@ -117,6 +117,18 @@ function ContactCTA() {
 
               <div className="flex gap-4">
                 <div className="bg-[#1f1f1f] p-3 rounded-lg text-yellow-400">
+                  <MapPin size={20} />
+                </div>
+                <div>
+                  <p className="text-gray-400 text-sm">Office</p>
+                  <p className="text-white text-sm">
+                    823 Congress Ave, Austin, Texas 78701, US
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="bg-[#1f1f1f] p-3 rounded-lg text-yellow-400">
                   <Clock size={20} />
                 </div>
                 <div>

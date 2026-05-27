@@ -81,6 +81,11 @@ function Footer() {
               <span>1209 MOUNTAIN RD PL NE STE HALBUQUERQUE, NM 87110</span>
             </div>
 
+            <div className="flex items-center gap-2">
+              <MapPin size={16} className="text-yellow-400" />
+              <span>823 Congress Ave, Austin, Texas 78701, US</span>
+            </div>
+
           </div>
 
           {/* SOCIAL */}
