@@ -4,6 +4,7 @@ import ItHowItWorks from "../itComponents/ItHowItWorks";
 import ItServices from "../itComponents/ItServices";
 import ItStats from "../itComponents/ItStats";
 import ItWhyChooseUs from "../itComponents/ItWhyChooseUs";
+import Plans from "../pages/Plans";
 
 
 function IT() {
@@ -17,6 +18,7 @@ function IT() {
       <ItFeatures/>
       <ItWhyChooseUs/>
       <ItHowItWorks/>
+      <Plans />
 
       
     </>

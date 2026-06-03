@@ -20,6 +20,7 @@ import Layout from "./components/Layout";
 
 
 
+
 // Lazy Loaded Main Pages
 const Home = lazy(() => import("./pages/Home"));
 const Services = lazy(() => import("./pages/Services"));
@@ -74,6 +75,7 @@ function AnimatedRoutes() {
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="terms-conditions" element={<TermsConditions />} />
             <Route path="technology-trends" element={<TechnologyTrends />} />
+            
           </Route>
         </Routes>
       </Suspense>

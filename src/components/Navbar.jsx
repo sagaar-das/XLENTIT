@@ -138,6 +138,7 @@ function Navbar() {
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#d4af37] transition-all group-hover:w-full"></span>
           </NavLink>
 
+
           {/* Contact Us */}
           <NavLink to="/contact" className={navLinkClass}>
             Contact Us
