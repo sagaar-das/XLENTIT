@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "emailjs-com";
-import PhoneInput from "react-phone-number-input";
+import { sendContactEmail } from "../utils/email";
+import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { useNavigate } from "react-router-dom";
 
@@ -11,11 +11,11 @@ import {
   Phone,
   MapPin,
   Clock,
-  Link,
   Linkedin,
   Facebook,
   Instagram
 } from "lucide-react";
+
 
 function ContactCTA() {
 
@@ -29,6 +29,7 @@ function ContactCTA() {
 
   const [accepted, setAccepted] = useState(false);
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -38,26 +39,55 @@ function ContactCTA() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Phone is optional -> validate only if user enters it
-    if (form.phone && form.phone.length < 10) {
+    const trimmedForm = {
+      name: form.name.trim(),
+      email: form.email.trim(),
+      location: form.location.trim(),
+      phone: form.phone || "",
+    };
+
+    if (!trimmedForm.name || !trimmedForm.email || !trimmedForm.phone || !trimmedForm.location) {
+      setSuccess("");
+      setError("Please fill in all fields before submitting.");
+      return;
+    }
+
+    if (!isValidPhoneNumber(trimmedForm.phone)) {
+      setSuccess("");
       setError("Please enter a valid phone number.");
       return;
     }
 
-    setError("");
-    setLoading(true);
+    if (!accepted) {
+      setSuccess("");
+      setError("Please accept the Privacy Policy and Terms & Conditions.");
+      return;
+    }
 
-    emailjs
-      .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form, "YOUR_PUBLIC_KEY")
-      .then(() => {
-        setLoading(false);
-        alert("Form submitted successfully!");
-        setForm({ name: "", email: "", location: "", phone: "" });
-      })
-      .catch(() => {
-        setLoading(false);
-        setError("Failed to send message. Try again.");
-      });
+    setError("");
+setSuccess("");
+setLoading(true);
+
+sendContactEmail(trimmedForm)
+  .then(() => {
+    setLoading(false);
+    setSuccess("Thank you! Your message has been sent.");
+
+    setForm({
+      name: "",
+      email: "",
+      location: "",
+      phone: "",
+    });
+
+    setAccepted(false);
+  })
+  .catch((error) => {
+    console.error(error);
+
+    setLoading(false);
+    setError("Failed to send message. Please try again.");
+  });
   };
 
   return (
@@ -99,7 +129,7 @@ function ContactCTA() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Phone</p>
-                  <p className="text-white">+1 (713) 551-4969</p>
+                  <p className="text-white">+1 (780) 851-7844</p>
                 </div>
               </div>
 
@@ -217,6 +247,8 @@ function ContactCTA() {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Full Name"
+                autoComplete="name"
+                required
                 className="bg-[#1a1a1a] text-white px-3 py-2.5 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-500"
               />
 
@@ -226,6 +258,8 @@ function ContactCTA() {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="Email Address"
+                autoComplete="email"
+                required
                 className="bg-[#1a1a1a] px-3 py-2.5 rounded-md text-white text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-500"
               />
 
@@ -236,6 +270,7 @@ function ContactCTA() {
                   value={form.phone}
                   onChange={(value) => setForm({ ...form, phone: value })}
                   placeholder="Phone number"
+                  required
                   className="text-sm bg-transparent text-white w-full"
                 />
               </div>
@@ -246,6 +281,8 @@ function ContactCTA() {
                 value={form.location}
                 onChange={handleChange}
                 placeholder="Location"
+                autoComplete="address-level2"
+                required
                 className="bg-[#1a1a1a] px-3 py-2.5 rounded-md text-white text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-500"
               />
 
@@ -254,6 +291,7 @@ function ContactCTA() {
                   type="checkbox"
                   checked={accepted}
                   onChange={() => setAccepted(!accepted)}
+                  required
                   className="mt-1 accent-yellow-400"
                 />
 
@@ -289,12 +327,13 @@ function ContactCTA() {
               </div>
 
               {error && <p className="text-red-400 text-xs">{error}</p>}
+              {success && <p className="text-green-400 text-xs">{success}</p>}
 
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 disabled={loading}
-                className="bg-yellow-400 text-black py-2.5 rounded-md font-medium text-sm hover:bg-yellow-300 transition"
+                className="bg-yellow-400 text-black py-2.5 rounded-md font-medium text-sm hover:bg-yellow-300 disabled:cursor-not-allowed disabled:opacity-70 transition"
               >
                 {loading ? "Sending..." : "Submit"}
               </motion.button>

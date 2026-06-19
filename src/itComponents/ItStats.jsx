@@ -1,6 +1,6 @@
 
 
-function ItStats() {
+function  ItStats() {
   return (
     <section className="bg-black px-6 sm:px-6 py-10">
 
