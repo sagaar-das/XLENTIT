@@ -136,7 +136,13 @@ function Navbar() {
 
           {/*  Careers */}
           <NavLink to="/careers" className={navLinkClass}>
-            Careers <span className="text-xs">↓</span>
+            Careers
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#d4af37] transition-all group-hover:w-full"></span>
+          </NavLink>
+
+          {/* For Employers */}
+          <NavLink to="/for-employers" className={navLinkClass}>
+            For Employers
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#d4af37] transition-all group-hover:w-full"></span>
           </NavLink>
 
@@ -151,7 +157,7 @@ function Navbar() {
         </div>
 
         {/*  CTA */}
-        <button className="hidden md:block bg-yellow-400 text-black px-5 py-2 rounded-lg font-semibold hover:bg-[#b8962e] transition">
+        <button onClick={() => navigate("/contact")} className="hidden md:block bg-yellow-400 text-black px-5 py-2 rounded-lg font-semibold hover:bg-[#b8962e] transition">
           Book Free Session
         </button>
 

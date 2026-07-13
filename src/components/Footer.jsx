@@ -77,10 +77,7 @@ function Footer() {
               <span>+1 (713) 551-4969</span>
             </div>
 
-            {/* <div className="flex items-center gap-2">
-              <MapPin size={16} className="text-yellow-400" />
-              <span>1209 MOUNTAIN RD PL NE STE HALBUQUERQUE, NM 87110</span>
-            </div> */}
+          
 
             <div className="flex items-center gap-2">
               <MapPin size={16} className="text-yellow-400" />

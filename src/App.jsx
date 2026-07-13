@@ -24,6 +24,7 @@ import Layout from "./components/Layout";
 // Lazy Loaded Main Pages
 const Home = lazy(() => import("./pages/Home"));
 const Services = lazy(() => import("./pages/Services"));
+const ForEmployers = lazy(() => import("./pages/ForEmployer"));
 const Careers = lazy(() => import("./pages/Careers"));
 const ClientsPage = lazy(() => import("./pages/ClientsPage"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
@@ -69,6 +70,7 @@ function AnimatedRoutes() {
             <Route path="services" element={<Services />} />
             <Route path="services/:serviceId" element={<Services />} />
             <Route path="careers" element={<Careers />} />
+            <Route path="for-employers" element={<ForEmployers />} />
             <Route path="clients" element={<ClientsPage />} />
             <Route path="contact" element={<ContactUs />} />
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
