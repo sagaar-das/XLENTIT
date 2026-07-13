@@ -56,12 +56,14 @@ function Navbar() {
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => navigate("/")}
         >
+          
           <img
             src={logo}
-            loading="lazy"
             alt="XLENT-IT Logo"
             className="h-10 md:h-12 w-auto object-contain"
           />
+        
+          
           <div className="leading-tight">
             <h1 className="text-yellow-200 text-lg md:text-2xl font-bold">
               XLENT

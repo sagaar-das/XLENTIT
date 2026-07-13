@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from "lucide-react";
 import FooterBrand from "./FooterBrand";
 import logo from "../assets/logo.png";
+import ev from "../assets/E-Verify_logo.webp";
 import { useNavigate } from "react-router-dom";
 
 
@@ -76,10 +77,10 @@ function Footer() {
               <span>+1 (713) 551-4969</span>
             </div>
 
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <MapPin size={16} className="text-yellow-400" />
               <span>1209 MOUNTAIN RD PL NE STE HALBUQUERQUE, NM 87110</span>
-            </div>
+            </div> */}
 
             <div className="flex items-center gap-2">
               <MapPin size={16} className="text-yellow-400" />
@@ -124,6 +125,12 @@ function Footer() {
             <p onClick={() => navigate("/privacy-policy")} className="hover:text-yellow-400 cursor-pointer">
               Privacy Policy
             </p>
+          </div>
+
+          <div>
+             <img src={ev} 
+             alt="XLENT-IT Logo"
+            className="h-8 md:h-12 w-auto object-contain" />
           </div>
 
         </div>

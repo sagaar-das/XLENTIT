@@ -30,8 +30,7 @@ const ContactUs = lazy(() => import("./pages/ContactUs"));
 const TermsConditions = lazy(() => import("./pages/TermsConditions"));
 const TechnologyTrends = lazy(() => import("./pages/TechnologyTrends"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
-const WhatsAppButton = lazy(() =>
-  import("./components/WhatsAppButton")
+const WhatsAppButton = lazy(() => import("./components/WhatsAppButton")
 );
 
 
@@ -75,7 +74,7 @@ function AnimatedRoutes() {
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="terms-conditions" element={<TermsConditions />} />
             <Route path="technology-trends" element={<TechnologyTrends />} />
-            
+
           </Route>
         </Routes>
       </Suspense>
