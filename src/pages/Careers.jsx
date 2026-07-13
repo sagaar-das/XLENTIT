@@ -106,7 +106,7 @@ export default function Careers() {
 
         <>
             <Helmet>
-                <title>Careers | Technology Jobs at Xlent IT Services</title>
+                <title>Careers | Xlent IT Services</title>
 
                 <meta name="description" content="Explore exciting careers in IT, software development, staffing, recruiting, and technology services with Xlent IT Services." />
 

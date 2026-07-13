@@ -5,6 +5,8 @@ import ResumeDepartment from '../plansComponents/ResumeDepartment'
 import DeliveryDepartment from '../plansComponents/DeliveryDepartment'
 import PricingPlans from '../plansComponents/PricingPlans'
 
+
+
 function Plans() {
   return (
     <>

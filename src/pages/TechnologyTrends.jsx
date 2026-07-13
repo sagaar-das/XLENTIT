@@ -166,9 +166,12 @@ function TechnologyTrends() {
 
         <>
             <Helmet>
-                <title>2026 Technology Trends | AI, Robotics & Cybersecurity</title>
+                <title>Technology Trends | XLent IT Services</title>
 
-                <meta name="description" content="Explore 2026 technology trends including AI, robotics, data centers, cybersecurity, and workforce transformation." />
+                <meta
+                    name="description"
+                    content="Stay updated with the latest technology trends, AI innovations, cloud computing, software development, data analytics, and digital transformation insights."
+                />
 
                 <link rel="canonical" href="https://www.xlent-itservice.com/technology-trends" />
             </Helmet>
@@ -293,7 +296,7 @@ function TechnologyTrends() {
                                                 className="overflow-hidden"
                                             >
 
-                                        {/* data of each heading */}
+                                                {/* data of each heading */}
                                                 <div className="px-6 pb-6 border-t border-gray-800">
                                                     <div className="pt-6 space-y-5">
 

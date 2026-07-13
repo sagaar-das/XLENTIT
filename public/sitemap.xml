@@ -1,32 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.xlent-itservice.com/</loc>
+<priority>1.0</priority>
 </url>
 
 <url>
-<loc>https://www.xlent-itservice.com/services</loc>
+<loc>https://www.xlent-itservice.com/about</loc>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://www.xlent-itservice.com/services/it</loc>
+<priority>0.9</priority>
 </url>
 
 <url>
 <loc>https://www.xlent-itservice.com/careers</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://www.xlent-itservice.com/clients</loc>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>https://www.xlent-itservice.com/contact</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://www.xlent-itservice.com/for-employers</loc>
+<priority>0.8</priority>
+</url>
+
+
+
+<url>
+<loc>https://www.xlent-itservice.com/technology-trends</loc>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>https://www.xlent-itservice.com/privacy-policy</loc>
+<priority>0.3</priority>
 </url>
 
 <url>
-<loc>https://www.xlent-itservice.com/terms-conditions</loc>
-</url>
-
-<url>
-<loc>https://www.xlent-itservice.com/technology-trends</loc>
+<loc>https://www.xlent-itservice.com/terms-and-conditions</loc>
+<priority>0.3</priority>
 </url>
 
 </urlset>

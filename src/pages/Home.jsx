@@ -13,12 +13,12 @@ function Home() {
     <>
       <Helmet>
         <title>
-          Xlent IT Services
+          Xlent IT Services | IT Solutions, Staffing & Career Services
         </title>
 
         <meta
           name="description"
-          content="Xlent IT Services provides IT staffing, recruiting, workforce solutions, software hiring, and technology consulting for businesses across the United States."
+          content="XLent IT Services provides innovative IT solutions, staffing, recruitment, career services, and technology consulting to help businesses and professionals succeed."
         />
 
         <link
@@ -35,7 +35,7 @@ function Home() {
             "url":"https://www.xlent-itservice.com",
             "logo":"https://www.xlent-itservice.com/logo.png",
             "email":"info@xlent-itservice.com",
-            "telephone":"+1-713-551-4969",
+            "telephone":"+1-780-851-7844",
             "address":{
               "@type":"PostalAddress",
               "streetAddress":"823 Congress Ave STE 300",

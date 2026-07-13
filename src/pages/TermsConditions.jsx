@@ -8,9 +8,14 @@ function TermsConditions() {
         <>
 
             <Helmet>
-                <title>Terms & Conditions | Xlent IT Services</title>
-                <meta name="description" content="Read the Terms & Conditions of Xlent IT Services regarding communication, services, and usage policies." />
-                <link rel="canonical" href="https://www.xlent-itservice.com/terms-conditions" />
+                <title>Terms & Conditions | XLent IT Services</title>
+
+                <meta
+                    name="description"
+                    content="Review the Terms & Conditions for using the XLent IT Services website, services, policies, and user responsibilities."
+                />
+
+                <link rel="canonical" href="https://www.xlent-itservice.com/terms-and-conditions" />
             </Helmet>
 
             <div className="bg-[#111] text-white min-h-screen px-6 py-16">
@@ -80,7 +85,7 @@ function TermsConditions() {
                         </p>
                     </section>
 
-                    
+
 
                 </div>
             </div>

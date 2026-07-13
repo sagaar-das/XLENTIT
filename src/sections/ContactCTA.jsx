@@ -133,17 +133,7 @@ sendContactEmail(trimmedForm)
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <div className="bg-[#1f1f1f] p-3 rounded-lg text-yellow-400">
-                  <MapPin size={20} />
-                </div>
-                <div>
-                  <p className="text-gray-400 text-sm">Office</p>
-                  <p className="text-white text-sm">
-                    1209 MOUNTAIN RD PL NE STE HALBUQUERQUE, NM 87110
-                  </p>
-                </div>
-              </div>
+              
 
               <div className="flex gap-4">
                 <div className="bg-[#1f1f1f] p-3 rounded-lg text-yellow-400">

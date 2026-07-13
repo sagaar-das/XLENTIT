@@ -1,6 +1,8 @@
 import bgimg from "../assets/clients-bg.webp";
 import { useNavigate } from "react-router-dom";
 
+import { Helmet } from "react-helmet-async";
+
 function ClientsPage() {
   const logos = [
     "bain-company-logo.svg",
@@ -33,54 +35,67 @@ function ClientsPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-[#0d0d0f] text-white">
+    <>
+      <Helmet>
+        <title>Our Clients | XLent IT Services</title>
 
-      {/* HERO */}
-      <div
-        className="h-[300px] flex items-center justify-center relative"
-        style={{
-          backgroundImage: `url(${bgimg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
+        <meta
+          name="description"
+          content="Discover how businesses trust XLent IT Services for innovative technology solutions, staffing, recruitment, and long-term strategic partnerships."
+        />
 
-        <h1 className="relative z-10 text-4xl md:text-6xl font-bold text-yellow-400">
-          OUR CLIENTS
-        </h1>
+        <link rel="canonical" href="https://www.xlent-itservice.com/clients" />
+      </Helmet>
+
+      <div className="bg-[#0d0d0f] text-white">
+
+        {/* HERO */}
+        <div
+          className="h-[300px] flex items-center justify-center relative"
+          style={{
+            backgroundImage: `url(${bgimg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/60"></div>
+
+          <h1 className="relative z-10 text-4xl md:text-6xl font-bold text-yellow-400">
+            OUR CLIENTS
+          </h1>
+        </div>
+
+
+        <div className="max-w-7xl mx-auto px-6 pt-8">
+          <button type="button" onClick={() => navigate(-1)}
+            className="text-yellow-400 text-sm hover:underline hover:text-white transition" >
+            ← Back
+          </button>
+        </div>
+
+
+
+
+        {/* LOGOS */}
+        <div className="max-w-7xl mx-auto py-16 px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 items-center">
+
+          {logos.map((logo, i) => (
+            <div
+              key={i}
+              className="flex items-center justify-center p-4 bg-white rounded-xl border border-yellow-400"
+            >
+              <img
+                src={`/clientLogo/${logo}`}
+                alt="client"
+                className="h-10 object-contain"
+              />
+            </div>
+          ))}
+
+        </div>
+
       </div>
-
-
-      <div className="max-w-7xl mx-auto px-6 pt-8">
-        <button type="button" onClick={() => navigate(-1)}
-          className="text-yellow-400 text-sm hover:underline hover:text-white transition" >
-          ← Back
-        </button>
-      </div>
-
-
-
-
-      {/* LOGOS */}
-      <div className="max-w-7xl mx-auto py-16 px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 items-center">
-
-        {logos.map((logo, i) => (
-          <div
-            key={i}
-            className="flex items-center justify-center p-4 bg-white rounded-xl border border-yellow-400"
-          >
-            <img
-              src={`/clientLogo/${logo}`}
-              alt="client"
-              className="h-10 object-contain"
-            />
-          </div>
-        ))}
-
-      </div>
-
-    </div>
+    </>
   );
 }
 
