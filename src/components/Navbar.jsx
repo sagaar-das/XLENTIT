@@ -75,7 +75,7 @@ function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-10 font-medium">
+        <div className="hidden md:flex items-center gap-8 text-sm">
 
           {/* Home */}
           <NavLink to="/" className={navLinkClass}>
@@ -143,6 +143,12 @@ function Navbar() {
           {/* For Employers */}
           <NavLink to="/for-employers" className={navLinkClass}>
             For Employers
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#d4af37] transition-all group-hover:w-full"></span>
+          </NavLink>
+
+          {/* About Us */}
+          <NavLink to="/about" className={navLinkClass}>
+            About Us
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#d4af37] transition-all group-hover:w-full"></span>
           </NavLink>
 
@@ -227,6 +233,17 @@ function Navbar() {
             Careers
           </NavLink>
 
+          {/* For Employers mobile */}
+          <NavLink to="/for-employers" onClick={() => setMenuOpen(false)} className="block">
+            For Employers
+          </NavLink>
+
+          {/* About Us Mobile */}
+          <NavLink to="/about" onClick={() => setMenuOpen(false)} className="block">
+            About Us
+          </NavLink>
+
+          {/* Contact Us Mobile */}
           <NavLink to="/contact" onClick={() => setMenuOpen(false)} className="block">
             Contact Us
           </NavLink>

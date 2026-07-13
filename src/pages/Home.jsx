@@ -13,8 +13,7 @@ function Home() {
     <>
       <Helmet>
         <title>
-          Xlent IT Services | IT Staffing, Recruiting &
-          Technology Solutions
+          Xlent IT Services
         </title>
 
         <meta

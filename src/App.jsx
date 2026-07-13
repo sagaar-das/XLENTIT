@@ -28,6 +28,7 @@ const ForEmployers = lazy(() => import("./pages/ForEmployer"));
 const Careers = lazy(() => import("./pages/Careers"));
 const ClientsPage = lazy(() => import("./pages/ClientsPage"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
+const About = lazy(() => import("./pages/About"));
 const TermsConditions = lazy(() => import("./pages/TermsConditions"));
 const TechnologyTrends = lazy(() => import("./pages/TechnologyTrends"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -73,6 +74,7 @@ function AnimatedRoutes() {
             <Route path="for-employers" element={<ForEmployers />} />
             <Route path="clients" element={<ClientsPage />} />
             <Route path="contact" element={<ContactUs />} />
+            <Route path="about" element={<About />} />
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="terms-conditions" element={<TermsConditions />} />
             <Route path="technology-trends" element={<TechnologyTrends />} />
