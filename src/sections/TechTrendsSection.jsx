@@ -16,7 +16,7 @@ function TechTrendsSection() {
   ];
 
   return (
-    <section className="relative bg-[#0d0d0f] py-16 px-6 overflow-hidden">
+    <section className="relative bg-[#0d0d0f] py-16 px-6 overflow-hidden border-t border-gray-800">
 
       {/* SMALL BACKGROUND YEAR */}
       <div className="absolute right-6 bottom-0 text-[90px] md:text-[140px] font-bold text-white/5 select-none">

@@ -1,4 +1,8 @@
-import { motion } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import ScrollReveal from "../components/ScrollReveal";
 
 import {
@@ -31,14 +35,28 @@ function Industries() {
     { name: "Travel & Hospitality", icon: <Plane size={26} /> },
   ];
 
+  const { scrollY } = useScroll();
+
+  // Content moves slightly slower than the page
+  const contentY = useTransform(scrollY, [0, 2500], [0, -120]);
+
+  // Slight fade effect
+  const contentOpacity = useTransform(scrollY, [0, 600], [1, 0.9]);
+
   return (
-    <section
-      className="relative py-20 px-6 overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
+    <section className="relative py-20 px-6 overflow-hidden border-t-2 border-gray-800">
+
+      {/* Fixed Background */}
+
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+        }}
+      />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/75" />
+      <div className="absolute inset-0 bg-black/75 backdrop-blur-[1px]" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto text-center">

@@ -5,7 +5,7 @@ function ClientsPreview() {
     const navigate = useNavigate();
 
     return (
-        <section className="relative py-24 px-6 overflow-hidden bg-[#0d0d0f] text-center">
+        <section className="relative py-24 px-6 overflow-hidden bg-[#0d0d0f] text-center border-t border-gray-800">
 
             {/* Animated Gradient BG */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#0d0d0f] via-[#111111] to-black opacity-90" />

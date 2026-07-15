@@ -93,7 +93,7 @@ sendContactEmail(trimmedForm)
   return (
     <section
       id="contact"
-      className="bg-[#1a1a1a] py-20 px-4 sm:px-6">
+      className="bg-[#1a1a1a] py-20 px-4 sm:px-6 border-t-2 border-gray-800">
 
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
 
