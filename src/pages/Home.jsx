@@ -7,6 +7,8 @@ import ClientsPreview from "../sections/ClientsPreview";
 import TechTrendsSection from "../sections/TechTrendsSection";
 import { Helmet } from "react-helmet-async";
 import WhyUs from "../sections/WhyUs";
+import FAQs from "../sections/FAQs";
+import Reviews from "../sections/Reviews";
 
 function Home() {
   return (
@@ -50,11 +52,21 @@ function Home() {
       </Helmet>
 
       <Hero />
+
       <ServicesSection />
+
       <Industries />
+
       <WhyUs />
+
       <TechTrendsSection />
+
+      <Reviews />
+
       <ClientsPreview />
+
+      <FAQs />
+
       <ContactCTA />
     </>
   );
