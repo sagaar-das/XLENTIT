@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 
 import { Helmet } from "react-helmet-async";
+import useExploreServices from "../hooks/useExploreServices";
 
 const careerServices = [
     "ATS-Optimized Resume Development",
@@ -43,6 +44,9 @@ const fadeUp = {
 };
 
 export default function About() {
+
+    const goToServices = useExploreServices();
+
     return (
 
         <>
@@ -249,12 +253,12 @@ export default function About() {
                                     <ArrowRight size={18} />
                                 </Link>
 
-                                <Link
-                                    to="/services"
+                                <button
+                                    onClick={goToServices}
                                     className="inline-flex items-center justify-center border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-6 py-3 rounded-lg transition duration-300"
                                 >
                                     Explore Services
-                                </Link>
+                                </button>
                             </div>
                         </section>
                     </motion.section>

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from "lucide-react";
 import FooterBrand from "./FooterBrand";
-import logo from "../assets/logo.png";
 import ev from "../assets/E-Verify_logo.webp";
 import { useNavigate } from "react-router-dom";
 
@@ -57,10 +56,12 @@ function Footer() {
           <div>
             <h3 className="text-white mb-2">Company</h3>
             <ul className="space-y-1">
+              <li onClick={() => navigate("/for-employers")} className="hover:text-yellow-400 cursor-pointer">For Employers</li>
               <li onClick={() => navigate("/careers")} className="hover:text-yellow-400 cursor-pointer">Careers</li>
+              <li onClick={() => navigate("/about")} className="hover:text-yellow-400 cursor-pointer">About Us</li>
               <li onClick={() => navigate("/technology-trends")} className="hover:text-yellow-400 cursor-pointer">Trends</li>
               <li onClick={() => navigate("/clients")} className="hover:text-yellow-400 cursor-pointer">Clients</li>
-              <li onClick={() => navigate("/contact")} className="hover:text-yellow-400 cursor-pointer">Contact</li>
+              <li onClick={() => navigate("/contact")} className="hover:text-yellow-400 cursor-pointer">Contact Us</li>
             </ul>
           </div>
 

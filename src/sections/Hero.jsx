@@ -12,6 +12,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import useExploreServices from "../hooks/useExploreServices";
 
 import bg1 from "../assets/service1.webp";
 import bg2 from "../assets/service2.webp";
@@ -23,6 +24,7 @@ import bg6 from "../assets/service6.webp";
 function Hero() {
 
   const navigate = useNavigate();
+  const goToServices = useExploreServices();
 
   const slides = [
     {
@@ -308,7 +310,7 @@ function Hero() {
                 whileTap={{
                   scale: .97,
                 }}
-                onClick={() => navigate("/services")}
+                onClick={goToServices}
                 className="group inline-flex items-center justify-center gap-3 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold text-sm sm:text-base px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-xl transition duration-300 shadow-[0_0_35px_rgba(250,204,21,.18)]"
               >
 

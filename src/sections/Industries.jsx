@@ -44,10 +44,9 @@ function Industries() {
   const contentOpacity = useTransform(scrollY, [0, 600], [1, 0.9]);
 
   return (
-    <section className="relative py-20 px-6 overflow-hidden border-t-2 border-gray-800">
+    <section className="relative py-20 px-6 overflow-hidden">
 
       {/* Fixed Background */}
-
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
@@ -59,7 +58,13 @@ function Industries() {
       <div className="absolute inset-0 bg-black/75 backdrop-blur-[1px]" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto text-center">
+      <motion.div
+        style={{
+          y: contentY,
+          opacity: contentOpacity,
+        }}
+        className="relative z-10 max-w-7xl mt-16 mx-auto text-center"
+      >
 
         {/* Header */}
         <ScrollReveal>
@@ -85,7 +90,15 @@ function Industries() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.04 }}
-              whileHover={{ scale: 1.06 }}
+              whileHover={{
+                scale: 1.06,
+                rotateX: -6,
+                rotateY: 6,
+                z: 80,
+              }}
+              style={{
+                transformStyle: "preserve-3d",
+              }}
               className="group bg-[#111]/90 border border-[#2a2a2a] rounded-xl p-6 flex flex-col items-center justify-center text-center"
             >
 
@@ -105,9 +118,9 @@ function Industries() {
 
         </div>
 
-      </div>
+      </motion.div>
 
-    </section>
+    </section >
   );
 }
 

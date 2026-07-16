@@ -45,12 +45,12 @@ function Reviews() {
 
           <div className="inline-flex px-5 py-2 rounded-full border border-yellow-400/30 bg-yellow-400/10">
             <span className="text-yellow-400 text-xs md:text-sm uppercase tracking-[0.2em] font-semibold">
-              Testimonials
+              Success Stories
             </span>
           </div>
 
           <h2 className="mt-7 text-white text-3xl md:text-5xl font-bold">
-            What Our <span className="text-yellow-400">Clients Say</span>
+            What Our <span className="text-yellow-400">Students </span>Say
           </h2>
 
           <p className="mt-5 text-gray-400 text-base md:text-lg leading-7">
@@ -60,7 +60,7 @@ function Reviews() {
 
         </div>
 
-                {/* Reviews */}
+         {/* Reviews */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {reviews.map((review, index) => (
             <motion.div

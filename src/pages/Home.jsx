@@ -9,8 +9,37 @@ import { Helmet } from "react-helmet-async";
 import WhyUs from "../sections/WhyUs";
 import FAQs from "../sections/FAQs";
 import Reviews from "../sections/Reviews";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function Home() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+
+    if (location.hash === "#services") {
+
+      const section = document.getElementById("services");
+
+      if (section) {
+
+        setTimeout(() => {
+
+          section.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+
+        }, 100);
+
+      }
+
+    }
+
+  }, [location]);
+
+  
   return (
     <>
       <Helmet>
