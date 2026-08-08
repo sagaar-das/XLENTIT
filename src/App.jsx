@@ -32,8 +32,7 @@ const About = lazy(() => import("./pages/About"));
 const TermsConditions = lazy(() => import("./pages/TermsConditions"));
 const TechnologyTrends = lazy(() => import("./pages/TechnologyTrends"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
-const WhatsAppButton = lazy(() => import("./components/WhatsAppButton")
-);
+// const WhatsAppButton = lazy(() => import("./components/WhatsAppButton"));
 
 
 // Scroll to Top on Route Change
@@ -96,9 +95,9 @@ function App() {
 
         <AnimatedRoutes />
 
-        <Suspense fallback={null}>
+        {/* <Suspense fallback={null}>
           <WhatsAppButton />
-        </Suspense>
+        </Suspense> */}
 
       </BrowserRouter>
 

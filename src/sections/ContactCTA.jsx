@@ -129,7 +129,7 @@ sendContactEmail(trimmedForm)
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Phone</p>
-                  <p className="text-white">+1 (780) 851-7844</p>
+                  <p className="text-white">+1 (484) 304-0329</p>
                 </div>
               </div>
 

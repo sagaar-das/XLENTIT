@@ -75,7 +75,7 @@ function Footer() {
 
             <div className="flex items-center gap-2">
               <Phone size={16} className="text-yellow-400" />
-              <span>+1 (780) 851-7844</span>
+              <span>+1 (484) 304-0329</span>
             </div>
 
           
